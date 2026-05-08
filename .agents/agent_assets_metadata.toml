@@ -1,0 +1,62 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "JLJoeQib0E4Xojd3Y_7C2"
+uri = "file://artifacts/frycuisine/src/assets/hero.png"
+type = "image"
+title = "pasta with meatballs"
+
+[[generated]]
+id = "gTWxSCLfDbcQqnAeDYRiM"
+uri = "file://artifacts/frycuisine/src/assets/corndogs.png"
+type = "image"
+title = "korean corn dogs"
+
+[[generated]]
+id = "ARZGMuIB8_N3W1jJ6ExF3"
+uri = "file://artifacts/frycuisine/src/assets/chocolate.png"
+type = "image"
+title = "dubai chocolate bar"
+
+[[generated]]
+id = "r6P3bK_ArP-DbN06o02LA"
+uri = "file://artifacts/frycuisine/src/assets/momo.png"
+type = "image"
+title = "street momo"
+
+[[generated]]
+id = "UbqSxOn3dClo8qcm37J9W"
+uri = "file://artifacts/frycuisine/src/assets/pancakes.png"
+type = "image"
+title = "souffle pancakes"
+
+[[generated]]
+id = "F6zlhcHKhAdwIV-jjRKFJ"
+uri = "file://artifacts/frycuisine/src/assets/nasigoreng.png"
+type = "image"
+title = "nasi goreng"
+
+[[generated]]
+id = "JJNFGKn-bS7ABYKYzUUAk"
+uri = "file://artifacts/frycuisine/src/assets/avocado.png"
+type = "image"
+title = "avocado toast"
+
+[[generated]]
+id = "kp4GiZ7-JHYfnTI5UGngJ"
+uri = "file://artifacts/frycuisine/src/assets/proteinbowl.png"
+type = "image"
+title = "protein bowl"
+
+[[generated]]
+id = "wsYMnHuknFrqmrrxwqq-R"
+uri = "file://artifacts/frycuisine/src/assets/greensalad.png"
+type = "image"
+title = "green salad"
+
+[[generated]]
+id = "AauLBNmj-ivCyoUpz6mfn"
+uri = "file://artifacts/frycuisine/src/assets/breakfast.png"
+type = "image"
+title = "breakfast spread"
