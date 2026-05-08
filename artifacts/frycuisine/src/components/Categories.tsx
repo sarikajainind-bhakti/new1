@@ -3,38 +3,84 @@ import avocadoImg from "../assets/avocado.png";
 import proteinbowlImg from "../assets/proteinbowl.png";
 import greensaladImg from "../assets/greensalad.png";
 import nasigorengImg from "../assets/nasigoreng.png";
+import momoImg from "../assets/momo.png";
+
+const categories = [
+  { name: "Breakfast",   image: breakfastImg },
+  { name: "Lunch",       image: proteinbowlImg },
+  { name: "Dinner",      image: nasigorengImg },
+  { name: "Street Food", image: momoImg },
+  { name: "Fast Food",   image: avocadoImg },
+  { name: "Salad",       image: greensaladImg },
+];
 
 export function Categories() {
-  const categories = [
-    { name: "Breakfast", image: breakfastImg },
-    { name: "Lunch", image: proteinbowlImg },
-    { name: "Dinner", image: nasigorengImg },
-    { name: "Street Food", image: nasigorengImg },
-    { name: "Fast Food", image: avocadoImg },
-    { name: "Salad", image: greensaladImg }
-  ];
-
   return (
-    <section className="bg-white py-20 px-6 md:px-12 border-t border-gray-100">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex justify-center items-center gap-3 mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold tracking-widest text-[#1a1a2e] uppercase">
-            EXPLORE FOOD BY
+    <section style={{ backgroundColor: "#ffffff", padding: "44px 24px 52px" }}>
+      <div style={{ maxWidth: "900px", margin: "0 auto" }}>
+
+        {/* Section heading: "EXPLORE FOOD BY" + "Category" in script */}
+        <div style={{ marginBottom: "36px" }}>
+          <h2 style={{
+            fontFamily: "'Cinzel', 'Cinzel Decorative', serif",
+            fontWeight: 700,
+            fontSize: "clamp(20px, 3.5vw, 32px)",
+            color: "#1A1A1A",
+            textTransform: "uppercase",
+            letterSpacing: "0.06em",
+            lineHeight: 1.2,
+          }}>
+            Explore Food by{" "}
+            <span style={{
+              fontFamily: "'Great Vibes', cursive",
+              fontWeight: 400,
+              fontSize: "clamp(28px, 5vw, 48px)",
+              color: "#6E4B2A",
+              textTransform: "none",
+              letterSpacing: "0",
+            }}>
+              Category
+            </span>
           </h2>
-          <span className="font-script text-4xl md:text-5xl text-[#D4A017]">Category</span>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-8 md:gap-12">
+        {/* Category circles row */}
+        <div style={{
+          display: "flex",
+          justifyContent: "space-between",
+          gap: "12px",
+          flexWrap: "wrap",
+        }}>
           {categories.map((cat, idx) => (
-            <div key={idx} className="flex flex-col items-center group cursor-pointer w-24 md:w-32">
-              <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-4 shadow-lg border-2 border-transparent group-hover:border-[#D4A017] transition-all">
-                <img 
-                  src={cat.image} 
-                  alt={cat.name} 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            <div key={idx} style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              cursor: "pointer",
+              width: "110px",
+            }}>
+              <div style={{
+                width: "100px",
+                height: "100px",
+                borderRadius: "50%",
+                overflow: "hidden",
+                border: "3px solid #e8dfd4",
+                boxShadow: "0 2px 10px rgba(0,0,0,0.1)",
+                marginBottom: "10px",
+              }}>
+                <img
+                  src={cat.image}
+                  alt={cat.name}
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
                 />
               </div>
-              <span className="font-serif italic text-[#8b5a2b] font-medium text-center">
+              <span style={{
+                fontFamily: "'Cormorant Garamond', serif",
+                fontStyle: "italic",
+                fontSize: "14px",
+                color: "#6E4B2A",
+                textAlign: "center",
+              }}>
                 {cat.name}
               </span>
             </div>

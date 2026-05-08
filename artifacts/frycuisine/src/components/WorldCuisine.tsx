@@ -1,57 +1,98 @@
 export function WorldCuisine() {
   const countries = [
-    {
-      flag: "🇮🇳",
-      name: "India",
-      dish: "Paneer Chicken Tikka",
-      desc: "A rich and flavorful Indian classic with tender chicken and paneer in a creamy tomato sauce."
-    },
-    {
-      flag: "🇰🇷",
-      name: "Korea",
-      dish: "Tteok-bokki",
-      desc: "Spicy and chewy Korean rice cakes stir-fried in a sweet and savory chili paste."
-    },
-    {
-      flag: "🇮🇹",
-      name: "Italy",
-      dish: "Pasta Bolognese",
-      desc: "Traditional Italian pasta served with a slow-cooked, hearty meat-based ragù."
-    }
+    { flag: "🇮🇳", name: "India",  dish: "Paneer Chicken Tikka" },
+    { flag: "🇰🇷", name: "Korea",  dish: "Tteok-bokki" },
+    { flag: "🇮🇹", name: "Italy",  dish: "Pasta Bolognese" },
   ];
 
   return (
-    <section className="bg-[#fcfbf9] py-20 px-6 md:px-12 border-y border-gray-200">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex items-center justify-center gap-4 mb-16">
-          <div className="flex items-center gap-1 text-[#D4A017]">
-            <span className="w-2 h-2 rotate-45 bg-[#D4A017]"></span>
-            <span className="w-1.5 h-1.5 rotate-45 bg-[#D4A017] opacity-50"></span>
-            <span className="w-1 h-1 rotate-45 bg-[#D4A017] opacity-25"></span>
-          </div>
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-center tracking-widest text-[#1a1a2e] uppercase">
-            WORLD FAMOUS FOOD BY COUNTRY
+    <section style={{ backgroundColor: "#ffffff", padding: "40px 24px 48px" }}>
+      <div style={{ maxWidth: "860px", margin: "0 auto" }}>
+
+        {/* Section title with dashed lines + diamond */}
+        <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "36px" }}>
+          <div style={{ flex: 1, borderTop: "1px solid #bbb" }} />
+          <span style={{ color: "#bbb", fontSize: "14px" }}>✦</span>
+          <h2 style={{
+            fontFamily: "'Cormorant Garamond', 'Playfair Display', serif",
+            fontWeight: 600,
+            fontSize: "clamp(14px, 2.2vw, 20px)",
+            color: "#1A1A1A",
+            letterSpacing: "0.12em",
+            textTransform: "uppercase",
+            whiteSpace: "nowrap",
+          }}>
+            World Famous Food by Country
           </h2>
-          <div className="flex items-center gap-1 text-[#D4A017]">
-            <span className="w-1 h-1 rotate-45 bg-[#D4A017] opacity-25"></span>
-            <span className="w-1.5 h-1.5 rotate-45 bg-[#D4A017] opacity-50"></span>
-            <span className="w-2 h-2 rotate-45 bg-[#D4A017]"></span>
-          </div>
+          <span style={{ color: "#bbb", fontSize: "14px" }}>✦</span>
+          <div style={{ flex: 1, borderTop: "1px solid #bbb" }} />
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        {/* 3 country cards */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px" }}>
           {countries.map((item, idx) => (
-            <div key={idx} className="flex flex-col items-center text-center p-8 bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow group">
-              <div className="text-5xl mb-4 p-4 rounded-full bg-gray-50 border border-gray-100 shadow-inner group-hover:scale-110 transition-transform">
+            <div key={idx} style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              textAlign: "center",
+              padding: "24px 16px 20px",
+              border: "1px solid #eee",
+              backgroundColor: "#fff",
+            }}>
+              {/* Flag circle */}
+              <div style={{
+                width: "72px",
+                height: "72px",
+                borderRadius: "50%",
+                border: "2px solid #e0d8cc",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: "36px",
+                marginBottom: "12px",
+                backgroundColor: "#f9f6f1",
+              }}>
                 {item.flag}
               </div>
-              <h3 className="font-serif italic text-2xl text-[#8b5a2b] mb-2">{item.name}</h3>
-              <h4 className="font-bold text-lg mb-4 text-[#1a1a2e]">{item.dish}</h4>
-              <p className="text-gray-500 text-sm mb-6 flex-1 leading-relaxed">
-                {item.desc}
+
+              {/* Country name italic */}
+              <p style={{
+                fontFamily: "'Cormorant Garamond', serif",
+                fontStyle: "italic",
+                fontSize: "17px",
+                color: "#6E4B2A",
+                marginBottom: "4px",
+              }}>
+                {item.name}
               </p>
-              <button className="border border-[#1a1a2e] px-6 py-2 text-xs font-bold tracking-widest text-[#1a1a2e] uppercase hover:bg-[#1a1a2e] hover:text-white transition-colors">
-                EXPLORE
+
+              {/* Dish name bold */}
+              <h3 style={{
+                fontFamily: "'Lora', serif",
+                fontWeight: 700,
+                fontSize: "14px",
+                color: "#1A1A1A",
+                marginBottom: "16px",
+                lineHeight: 1.4,
+              }}>
+                {item.dish}
+              </h3>
+
+              {/* Explore button */}
+              <button style={{
+                border: "1px solid #333",
+                padding: "6px 20px",
+                fontSize: "11px",
+                fontFamily: "'Lora', serif",
+                fontWeight: 600,
+                letterSpacing: "1.5px",
+                textTransform: "uppercase",
+                color: "#1A1A1A",
+                background: "transparent",
+                cursor: "pointer",
+              }}>
+                Explore
               </button>
             </div>
           ))}

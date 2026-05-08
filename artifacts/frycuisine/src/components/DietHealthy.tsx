@@ -1,40 +1,94 @@
 import avocadoImg from "../assets/avocado.png";
 import proteinbowlImg from "../assets/proteinbowl.png";
 import greensaladImg from "../assets/greensalad.png";
+import nasigorengImg from "../assets/nasigoreng.png";
+import breakfastImg from "../assets/breakfast.png";
+
+const items = [
+  { title: "Keto Avocado Toast",      image: avocadoImg },
+  { title: "High Protein Oats Bowl",  image: proteinbowlImg },
+  { title: "Green Bowl Salad",        image: greensaladImg },
+  { title: "High Light Protein",      image: nasigorengImg },
+  { title: "Matcha Energy Bar",       image: breakfastImg },
+];
 
 export function DietHealthy() {
-  const items = [
-    { title: "Keto Avocado Toast", image: avocadoImg },
-    { title: "High Protein Bowl", image: proteinbowlImg },
-    { title: "Green Bowl Salad", image: greensaladImg },
-    { title: "High Light Protein", image: proteinbowlImg },
-    { title: "Matcha Energy Bar", image: greensaladImg }
-  ];
-
   return (
-    <section className="bg-gray-50 py-20 px-6 md:px-12">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-serif font-black tracking-widest text-[#1a1a2e] uppercase inline-block border-b-2 border-[#D4A017] pb-2">
-            DIET & HEALTHY FOOD QUEEN
-          </h2>
-        </div>
+    <section style={{ backgroundColor: "#F8F6F1", padding: "44px 24px 52px" }}>
+      <div style={{ maxWidth: "900px", margin: "0 auto" }}>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        {/* Heading — bold, centered */}
+        <h2 style={{
+          fontFamily: "'Cinzel Decorative', 'Cinzel', serif",
+          fontWeight: 700,
+          fontSize: "clamp(18px, 3.2vw, 30px)",
+          color: "#1A1A1A",
+          textTransform: "uppercase",
+          letterSpacing: "0.06em",
+          textAlign: "center",
+          marginBottom: "36px",
+        }}>
+          Diet &amp; Healthy Food Queen
+        </h2>
+
+        {/* 5-card row */}
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(5, 1fr)",
+          gap: "20px",
+        }}>
           {items.map((item, idx) => (
-            <div key={idx} className="flex flex-col items-center group cursor-pointer">
-              <div className="w-full aspect-square overflow-hidden rounded-full mb-4 border-4 border-white shadow-md relative">
-                <img 
-                  src={item.image} 
-                  alt={item.title} 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            <div key={idx} style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              textAlign: "center",
+              cursor: "pointer",
+            }}>
+              {/* Square image */}
+              <div style={{
+                width: "100%",
+                aspectRatio: "1",
+                overflow: "hidden",
+                marginBottom: "12px",
+                border: "3px solid #fff",
+                boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+                borderRadius: "50%",
+              }}>
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
                 />
               </div>
-              <h3 className="font-serif italic text-lg text-center text-[#8b5a2b] mb-3 leading-tight group-hover:text-[#D4A017] transition-colors h-12 flex items-center">
+
+              {/* Title */}
+              <p style={{
+                fontFamily: "'Cormorant Garamond', 'Playfair Display', serif",
+                fontStyle: "italic",
+                fontSize: "14px",
+                color: "#6E4B2A",
+                lineHeight: 1.4,
+                marginBottom: "10px",
+                minHeight: "38px",
+              }}>
                 {item.title}
-              </h3>
-              <button className="text-xs font-bold tracking-widest text-gray-500 uppercase hover:text-[#1a1a2e] border-b border-transparent hover:border-[#1a1a2e] pb-1 transition-all">
-                EXPLORE
+              </p>
+
+              {/* Explore */}
+              <button style={{
+                border: "1px solid #888",
+                padding: "4px 14px",
+                fontSize: "10px",
+                fontFamily: "'Lora', serif",
+                fontWeight: 600,
+                letterSpacing: "1.2px",
+                textTransform: "uppercase",
+                color: "#555",
+                background: "transparent",
+                cursor: "pointer",
+              }}>
+                Explore
               </button>
             </div>
           ))}
