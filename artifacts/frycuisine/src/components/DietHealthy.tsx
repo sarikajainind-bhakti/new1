@@ -1,95 +1,143 @@
 import avocadoImg from "../assets/avocado.png";
 import proteinbowlImg from "../assets/proteinbowl.png";
 import greensaladImg from "../assets/greensalad.png";
-import nasigorengImg from "../assets/nasigoreng.png";
-import breakfastImg from "../assets/breakfast.png";
 
 const items = [
-  { title: "Keto Avocado Toast",      image: avocadoImg },
-  { title: "High Protein Oats Bowl",  image: proteinbowlImg },
-  { title: "Green Bowl Salad",        image: greensaladImg },
-  { title: "High Light Protein",      image: nasigorengImg },
-  { title: "Matcha Energy Bar",       image: breakfastImg },
+  {
+    category: "Weight Loss Diet Foods",
+    title: "Quinoa Veg Salad Bowl",
+    desc: "Fresh vegetables with quinoa and light dressing. Perfect for healthy weight loss and clean eating.",
+    image: greensaladImg,
+  },
+  {
+    category: "High Protein Diet Foods",
+    title: "Paneer Protein Power Bowl",
+    desc: "High protein paneer with veggies and healthy options. Keeps you full and boosts energy.",
+    image: proteinbowlImg,
+  },
+  {
+    category: "Keto Food List",
+    title: "Avocado Egg Keto Plate",
+    desc: "Low carb avocado and eggs for keto lifestyle. Supports fat burning and steady energy.",
+    image: avocadoImg,
+  },
 ];
 
 export function DietHealthy() {
   return (
-    <section style={{ backgroundColor: "#F8F6F1", padding: "44px 24px 52px" }}>
+    <section style={{ backgroundColor: "#F8F6F1", padding: "52px 24px 60px" }}>
       <div style={{ maxWidth: "900px", margin: "0 auto" }}>
 
-        {/* Heading — bold, centered */}
+        {/* Heading */}
         <h2 style={{
           fontFamily: "'Cinzel Decorative', 'Cinzel', serif",
           fontWeight: 700,
-          fontSize: "clamp(18px, 3.2vw, 30px)",
+          fontSize: "clamp(18px, 3.2vw, 32px)",
           color: "#1A1A1A",
           textTransform: "uppercase",
-          letterSpacing: "0.06em",
+          letterSpacing: "0.05em",
           textAlign: "center",
-          marginBottom: "36px",
+          marginBottom: "40px",
+          lineHeight: 1.25,
         }}>
-          Diet &amp; Healthy Food Queen
+          Diet &amp; Healthy Food Guides
         </h2>
 
-        {/* 5-card row */}
+        {/* 3-card grid */}
         <div style={{
           display: "grid",
-          gridTemplateColumns: "repeat(5, 1fr)",
-          gap: "20px",
+          gridTemplateColumns: "repeat(3, 1fr)",
+          gap: "24px",
         }}>
           {items.map((item, idx) => (
-            <div key={idx} style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              textAlign: "center",
-              cursor: "pointer",
-            }}>
-              {/* Square image */}
-              <div style={{
-                width: "100%",
-                aspectRatio: "1",
+            <div
+              key={idx}
+              style={{
+                backgroundColor: "#ffffff",
                 overflow: "hidden",
-                marginBottom: "12px",
-                border: "3px solid #fff",
-                boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
-                borderRadius: "50%",
-              }}>
+                boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
+                cursor: "pointer",
+              }}
+            >
+              {/* Image */}
+              <div style={{ width: "100%", height: "200px", overflow: "hidden" }}>
                 <img
                   src={item.image}
                   alt={item.title}
-                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    display: "block",
+                    transition: "transform 0.4s ease",
+                  }}
+                  onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.05)")}
+                  onMouseLeave={e => (e.currentTarget.style.transform = "scale(1)")}
                 />
               </div>
 
-              {/* Title */}
-              <p style={{
-                fontFamily: "'Cormorant Garamond', 'Playfair Display', serif",
-                fontStyle: "italic",
-                fontSize: "14px",
-                color: "#6E4B2A",
-                lineHeight: 1.4,
-                marginBottom: "10px",
-                minHeight: "38px",
-              }}>
-                {item.title}
-              </p>
+              {/* Card body */}
+              <div style={{ padding: "20px 18px 22px" }}>
+                {/* Category label */}
+                <p style={{
+                  fontFamily: "'Lora', serif",
+                  fontWeight: 700,
+                  fontSize: "13px",
+                  color: "#1A1A1A",
+                  textTransform: "uppercase",
+                  letterSpacing: "0.04em",
+                  marginBottom: "8px",
+                }}>
+                  {item.category}
+                </p>
 
-              {/* Explore */}
-              <button style={{
-                border: "1px solid #888",
-                padding: "4px 14px",
-                fontSize: "10px",
-                fontFamily: "'Lora', serif",
-                fontWeight: 600,
-                letterSpacing: "1.2px",
-                textTransform: "uppercase",
-                color: "#555",
-                background: "transparent",
-                cursor: "pointer",
-              }}>
-                Explore
-              </button>
+                {/* Recipe title — italic, underlined, brown */}
+                <h3 style={{
+                  fontFamily: "'Cormorant Garamond', 'Playfair Display', serif",
+                  fontStyle: "italic",
+                  fontWeight: 600,
+                  fontSize: "17px",
+                  color: "#6E4B2A",
+                  textDecoration: "underline",
+                  textDecorationColor: "#6E4B2A",
+                  marginBottom: "10px",
+                  lineHeight: 1.35,
+                }}>
+                  {item.title}
+                </h3>
+
+                {/* Description */}
+                <p style={{
+                  fontFamily: "'Lora', serif",
+                  fontSize: "12.5px",
+                  color: "#666666",
+                  lineHeight: 1.65,
+                  marginBottom: "18px",
+                }}>
+                  {item.desc}
+                </p>
+
+                {/* Read More button */}
+                <button
+                  style={{
+                    backgroundColor: "#4A2C1A",
+                    color: "#ffffff",
+                    border: "none",
+                    padding: "9px 22px",
+                    fontFamily: "'Lora', serif",
+                    fontWeight: 700,
+                    fontSize: "11px",
+                    letterSpacing: "1.8px",
+                    textTransform: "uppercase",
+                    cursor: "pointer",
+                    transition: "background-color 0.2s",
+                  }}
+                  onMouseEnter={e => (e.currentTarget.style.backgroundColor = "#6E4B2A")}
+                  onMouseLeave={e => (e.currentTarget.style.backgroundColor = "#4A2C1A")}
+                >
+                  Read More
+                </button>
+              </div>
             </div>
           ))}
         </div>
