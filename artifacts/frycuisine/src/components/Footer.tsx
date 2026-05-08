@@ -1,6 +1,6 @@
 import { Search, X, Bell } from "lucide-react";
 import { useState } from "react";
-import footerBg from "@assets/1_1778252561767.jpeg";
+import footerBg from "../assets/hero.png";
 
 function YouTubeIcon() {
   return (
@@ -52,7 +52,7 @@ export function Footer() {
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${footerBg})` }}
       />
-      <div className="absolute inset-0" style={{ backgroundColor: "rgba(0,0,0,0.82)" }} />
+      <div className="absolute inset-0" style={{ backgroundColor: "rgba(0,0,0,0.93)" }} />
 
       <div className="relative z-10 max-w-6xl mx-auto px-8 pt-14 pb-8">
 
