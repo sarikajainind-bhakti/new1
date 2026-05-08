@@ -1,0 +1,437 @@
+# FryCuisine Website – Complete Color & Font Style Guide
+
+## 1. Overall Design Style
+
+The website uses a premium food-magazine inspired aesthetic with:
+
+* Dark luxury hero sections
+* Cream / off-white content background
+* Elegant serif typography
+* Warm food-focused accent colors
+* Editorial blog layout style
+* Minimal but classy UI
+
+The overall mood is:
+**Luxury + Food Blog + Modern Editorial + Premium Cuisine Branding**
+
+---
+
+# 2. Main Color Palette
+
+## Primary Background Colors
+
+| Section                   | Color               | HEX Code | Usage                  |
+| ------------------------- | ------------------- | -------- | ---------------------- |
+| Hero Dark Background      | Deep Charcoal Black | #0D0D0D  | Hero banner background |
+| Footer Background Overlay | Smoky Black         | #111111  | Footer section         |
+| Main Content Background   | Warm Off White      | #F8F6F1  | Recipe/blog sections   |
+| Card Background           | Soft Ivory          | #F5F1E8  | Blog cards             |
+| White Sections            | Pure White          | #FFFFFF  | Recipe content area    |
+
+---
+
+## Accent Colors
+
+| Purpose        | Color        | HEX     |
+| -------------- | ------------ | ------- |
+| Gold Accent    | Soft Gold    | #C8A96B |
+| Warm Brown     | Coffee Brown | #6E4B2A |
+| Button Border  | Warm Beige   | #D7C1A3 |
+| Highlight Text | Light Cream  | #F3E7D3 |
+| Hover Accent   | Burnt Orange | #C96A2B |
+
+---
+
+## Text Colors
+
+| Text Type       | Color      | HEX     |
+| --------------- | ---------- | ------- |
+| Main Heading    | Rich Black | #1A1A1A |
+| Hero Heading    | Soft White | #F8F5F0 |
+| Paragraph Text  | Dark Gray  | #555555 |
+| Footer Text     | Warm Gray  | #D8D2C8 |
+| Category Labels | Brown Gold | #A67C52 |
+
+---
+
+# 3. Font Guide (Most Important)
+
+The site mainly uses elegant serif fonts mixed with readable clean body fonts.
+
+## A. Logo Font – “frycuisine”
+
+### Closest Font:
+
+* Playfair Display Bold
+  OR
+* Cormorant Garamond Bold
+
+### Style:
+
+* Serif
+* Luxury editorial style
+* High contrast thick/thin strokes
+
+### Logo Color:
+
+* White (#FFFFFF)
+
+### Placement:
+
+* Top left in navbar
+* Footer center branding
+
+---
+
+## B. Main Headings Font
+
+### Used In:
+
+* “TRENDING FOOD RIGHT NOW”
+* “Explore Trending, Global & Healthy Food”
+* Recipe section titles
+
+### Closest Font:
+
+* Cinzel Decorative
+  OR
+* Cormorant SC
+
+### Font Weight:
+
+* 500–700
+
+### Letter Style:
+
+* Uppercase
+* Wide spacing
+* Editorial magazine look
+
+### Heading Color:
+
+* #1A1A1A
+  or
+* #F8F5F0 on dark sections
+
+### Recommended Size:
+
+| Device               | Font Size |
+| -------------------- | --------- |
+| Desktop Hero Heading | 54px–64px |
+| Section Heading      | 42px–48px |
+| Mobile Heading       | 28px–36px |
+
+---
+
+## C. Body Text Font
+
+### Used For:
+
+* Recipe descriptions
+* Blog summaries
+* Footer text
+* Small content
+
+### Closest Font:
+
+* Lora
+  OR
+* Libre Baskerville
+  OR
+* Open Sans (small UI text)
+
+### Font Weight:
+
+* 300–400
+
+### Color:
+
+* #555555
+
+### Recommended Size:
+
+| Content Type    | Size      |
+| --------------- | --------- |
+| Paragraph       | 16px–18px |
+| Small Meta Text | 13px–14px |
+| Footer Links    | 16px      |
+
+---
+
+# 4. Section-by-Section Design Breakdown
+
+# HERO SECTION
+
+## Background
+
+* Dark food photography overlay
+* Black gradient overlay
+
+### Gradient Used:
+
+background:
+linear-gradient(
+180deg,
+rgba(0,0,0,0.75),
+rgba(0,0,0,0.55)
+)
+
+## Heading Font
+
+* Cinzel Decorative
+* Color: #F8F5F0
+* Size: 60px
+
+## Paragraph Font
+
+* Lora Italic
+* Color: #E8DED0
+* Size: 24px
+
+## Buttons
+
+### Button Border:
+
+#FFFFFF
+
+### Button Text:
+
+#FFFFFF
+
+### Hover:
+
+Background: #C8A96B
+Text: #111111
+
+### Border Radius:
+
+30px
+
+---
+
+# NAVBAR SECTION
+
+## Navbar Background
+
+Transparent over hero image
+
+## Nav Link Font
+
+* Playfair Display
+  OR
+* Cormorant Garamond
+
+## Nav Text Color
+
+#F8F5F0
+
+## Hover Color
+
+#C8A96B
+
+## Search Bar
+
+Background:
+#FFFFFF
+
+Border Radius:
+50px
+
+---
+
+# TRENDING FOOD SECTION
+
+## Background
+
+#F8F6F1
+
+## Card Style
+
+* Minimal shadow
+* Editorial grid
+* Soft borders
+
+### Card Background
+
+#F5F1E8
+
+### Card Shadow
+
+rgba(0,0,0,0.08)
+
+### Card Border Radius
+
+6px–10px
+
+## Recipe Title Font
+
+* Cormorant Garamond
+* Size: 28px
+* Weight: 600
+
+## Recipe Description Font
+
+* Lora
+* Size: 15px
+* Color: #555555
+
+## Read More Text
+
+* Uppercase
+* Letter spacing: 2px
+* Color: #6E4B2A
+
+---
+
+# RECIPES SECTION
+
+## Background
+
+#FFFFFF
+
+## Section Heading
+
+* Cinzel Decorative
+* Color: #1A1A1A
+
+## Recipe Cards
+
+Alternating image/text layout
+
+### Meta Text Color
+
+#A67C52
+
+### Paragraph Color
+
+#555555
+
+---
+
+# CATEGORY ICON SECTION
+
+## Circle Image Borders
+
+* White border
+* Thin beige shadow
+
+### Border Color
+
+#D7C1A3
+
+## Category Labels Font
+
+* Playfair Display
+* Size: 18px
+
+---
+
+# FOOTER SECTION
+
+## Background
+
+Dark textured food image with overlay
+
+### Overlay Color
+
+rgba(0,0,0,0.72)
+
+## Footer Heading Font
+
+* Cormorant Garamond Bold
+* Color: #FFFFFF
+
+## Footer Links Font
+
+* Lora
+* Color: #D8D2C8
+
+## Subscribe Button
+
+Background:
+#D62828
+
+Text:
+#FFFFFF
+
+Hover:
+#A4161A
+
+---
+
+# 5. Suggested Google Fonts
+
+Use these exact fonts from Google Fonts:
+
+## Main Heading Font
+
+Cinzel Decorative
+[https://fonts.google.com/specimen/Cinzel+Decorative](https://fonts.google.com/specimen/Cinzel+Decorative)
+
+## Elegant Serif Font
+
+Cormorant Garamond
+[https://fonts.google.com/specimen/Cormorant+Garamond](https://fonts.google.com/specimen/Cormorant+Garamond)
+
+## Body Font
+
+Lora
+[https://fonts.google.com/specimen/Lora](https://fonts.google.com/specimen/Lora)
+
+## Alternative Logo Font
+
+Playfair Display
+[https://fonts.google.com/specimen/Playfair+Display](https://fonts.google.com/specimen/Playfair+Display)
+
+---
+
+# 6. Exact Typography Pairing Recommendation
+
+## Best Combination
+
+| Purpose        | Font                        |
+| -------------- | --------------------------- |
+| Logo           | Playfair Display Bold       |
+| Hero Heading   | Cinzel Decorative           |
+| Section Titles | Cormorant Garamond SemiBold |
+| Body Text      | Lora                        |
+| Small UI Text  | Open Sans                   |
+
+---
+
+# 7. CSS Starter Variables
+
+```css
+:root {
+  --primary-bg: #0D0D0D;
+  --secondary-bg: #F8F6F1;
+  --card-bg: #F5F1E8;
+  --gold-accent: #C8A96B;
+  --brown-accent: #6E4B2A;
+  --text-dark: #1A1A1A;
+  --text-light: #F8F5F0;
+  --paragraph: #555555;
+  --footer-text: #D8D2C8;
+}
+```
+
+---
+
+# 8. Final Design Style Summary
+
+This website design combines:
+
+* Luxury restaurant branding
+* Editorial food magazine style
+* Pinterest-inspired recipe layout
+* Modern minimal UI
+* Warm premium food aesthetics
+
+The strongest visual elements are:
+
+1. Elegant serif typography
+2. Warm cream backgrounds
+3. Dark cinematic hero images
+4. Minimal luxury spacing
+5. Magazine-style content cards
+6. Gold/beige premium accents
