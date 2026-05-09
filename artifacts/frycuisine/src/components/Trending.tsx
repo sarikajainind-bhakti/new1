@@ -38,33 +38,20 @@ export function Trending() {
   return (
     <section style={{ backgroundColor: "#F8F6F1", padding: "48px 24px 64px" }}>
       <div style={{ maxWidth: "960px", margin: "0 auto" }}>
-        <div style={{ marginBottom: "36px" }}>
-          <div style={{
-            fontFamily: "'Cinzel', 'Cinzel Decorative', serif",
+        <h2
+          style={{
+            fontFamily: "'Cinzel Decorative', 'Cinzel', serif",
             fontWeight: 700,
-            fontSize: "clamp(20px, 3.2vw, 30px)",
+            fontSize: "clamp(26px, 5vw, 46px)",
             color: "#1A1A1A",
+            letterSpacing: "0.04em",
             textTransform: "uppercase",
-            letterSpacing: "0.08em",
-            lineHeight: 1.15,
-            marginBottom: "2px",
-          }}>
-            Trending Food
-          </div>
-          <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
-            <div style={{ width: "60px", borderTop: "1.5px solid #C4A882", marginBottom: "4px", flexShrink: 0 }} />
-            <span style={{
-              fontFamily: "'Great Vibes', cursive",
-              fontSize: "clamp(32px, 5.5vw, 52px)",
-              color: "#6E4B2A",
-              lineHeight: 1.1,
-              display: "block",
-            }}>
-              Right Now
-            </span>
-            <div style={{ flex: 1, maxWidth: "220px", borderTop: "1.5px solid #C4A882", marginBottom: "4px" }} />
-          </div>
-        </div>
+            marginBottom: "36px",
+            lineHeight: 1.1,
+          }}
+        >
+          Trending Food Right Now
+        </h2>
 
         <div
           style={{

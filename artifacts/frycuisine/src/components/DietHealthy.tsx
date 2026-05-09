@@ -29,33 +29,19 @@ export function DietHealthy() {
       <div style={{ maxWidth: "900px", margin: "0 auto" }}>
 
         {/* Heading */}
-        <div style={{ marginBottom: "40px" }}>
-          <div style={{
-            fontFamily: "'Cinzel', 'Cinzel Decorative', serif",
-            fontWeight: 700,
-            fontSize: "clamp(20px, 3.2vw, 30px)",
-            color: "#1A1A1A",
-            textTransform: "uppercase",
-            letterSpacing: "0.08em",
-            lineHeight: 1.15,
-            marginBottom: "2px",
-          }}>
-            Diet &amp;
-          </div>
-          <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
-            <div style={{ width: "60px", borderTop: "1.5px solid #C4A882", marginBottom: "4px", flexShrink: 0 }} />
-            <span style={{
-              fontFamily: "'Great Vibes', cursive",
-              fontSize: "clamp(32px, 5.5vw, 52px)",
-              color: "#6E4B2A",
-              lineHeight: 1.1,
-              display: "block",
-            }}>
-              Healthy
-            </span>
-            <div style={{ flex: 1, maxWidth: "220px", borderTop: "1.5px solid #C4A882", marginBottom: "4px" }} />
-          </div>
-        </div>
+        <h2 style={{
+          fontFamily: "'Cinzel Decorative', 'Cinzel', serif",
+          fontWeight: 700,
+          fontSize: "clamp(18px, 3.2vw, 32px)",
+          color: "#1A1A1A",
+          textTransform: "uppercase",
+          letterSpacing: "0.05em",
+          textAlign: "center",
+          marginBottom: "40px",
+          lineHeight: 1.25,
+        }}>
+          Diet &amp; Healthy Food Guides
+        </h2>
 
         {/* 3-card grid */}
         <div style={{
