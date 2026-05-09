@@ -39,8 +39,14 @@ export function Categories() {
             Explore Food By
           </div>
 
-          {/* Row 2: "Category" script + trailing line */}
-          <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+          {/* Row 2: line + "Category" script + line */}
+          <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
+            <div style={{
+              width: "60px",
+              borderTop: "1.5px solid #C4A882",
+              marginBottom: "4px",
+              flexShrink: 0,
+            }} />
             <span style={{
               fontFamily: "'Great Vibes', cursive",
               fontWeight: 400,
