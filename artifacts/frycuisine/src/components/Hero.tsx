@@ -18,8 +18,8 @@ export function Hero() {
         }}
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-10 w-full grid md:grid-cols-2 gap-8 items-center py-14 md:py-16">
-        <div className="space-y-5">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-10 w-full py-14 md:py-16">
+        <div className="space-y-5 max-w-xl">
           <h1
             style={{
               fontFamily: "'Cardo', serif",
@@ -118,26 +118,6 @@ export function Hero() {
                 &#9658;
               </span>
             </button>
-          </div>
-        </div>
-
-        <div className="hidden md:flex justify-center items-center">
-          <div
-            style={{
-              width: "320px",
-              height: "320px",
-              borderRadius: "50%",
-              overflow: "hidden",
-              border: "3px solid rgba(255,255,255,0.15)",
-              boxShadow: "0 0 60px rgba(0,0,0,0.6)",
-              flexShrink: 0,
-            }}
-          >
-            <img
-              src={heroImg}
-              alt="Delicious food"
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            />
           </div>
         </div>
       </div>
