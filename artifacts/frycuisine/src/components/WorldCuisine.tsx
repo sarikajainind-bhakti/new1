@@ -9,13 +9,13 @@ export function WorldCuisine() {
     <section style={{ backgroundColor: "#ffffff", padding: "40px 24px 48px" }}>
       <div style={{ maxWidth: "860px", margin: "0 auto" }}>
 
-        {/* Section title with dashed lines + diamond */}
+        {/* Section title — Libre Baskerville, centred with dashed lines */}
         <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "36px" }}>
           <div style={{ flex: 1, borderTop: "1px solid #bbb" }} />
           <span style={{ color: "#bbb", fontSize: "14px" }}>✦</span>
           <h2 style={{
-            fontFamily: "'Cormorant Garamond', 'Playfair Display', serif",
-            fontWeight: 600,
+            fontFamily: "'Libre Baskerville', serif",
+            fontWeight: 700,
             fontSize: "clamp(14px, 2.2vw, 20px)",
             color: "#1A1A1A",
             letterSpacing: "0.12em",
@@ -56,9 +56,9 @@ export function WorldCuisine() {
                 {item.flag}
               </div>
 
-              {/* Country name italic */}
+              {/* Country name — Playfair Display italic */}
               <p style={{
-                fontFamily: "'Cormorant Garamond', serif",
+                fontFamily: "'Playfair Display', serif",
                 fontStyle: "italic",
                 fontSize: "17px",
                 color: "#6E4B2A",
@@ -67,9 +67,9 @@ export function WorldCuisine() {
                 {item.name}
               </p>
 
-              {/* Dish name bold */}
+              {/* Dish name — Playfair Display bold (Hatton substitute) */}
               <h3 style={{
-                fontFamily: "'Lora', serif",
+                fontFamily: "'Playfair Display', serif",
                 fontWeight: 700,
                 fontSize: "14px",
                 color: "#1A1A1A",
@@ -79,19 +79,42 @@ export function WorldCuisine() {
                 {item.dish}
               </h3>
 
-              {/* Explore button */}
+              {/* Description — Lora */}
+              <p style={{
+                fontFamily: "'Lora', serif",
+                fontSize: "12px",
+                color: "#666",
+                lineHeight: 1.6,
+                marginBottom: "16px",
+              }}>
+                {item.name === "India" && "Rich, aromatic spices with creamy paneer and tikka masala."}
+                {item.name === "Korea" && "Spicy rice cakes in fiery sauce — Korea's beloved street food."}
+                {item.name === "Italy" && "Slow-simmered meat sauce with pasta, the Italian classic."}
+              </p>
+
+              {/* Explore button — Vollkorn */}
               <button style={{
                 border: "1px solid #333",
-                padding: "6px 20px",
+                padding: "7px 22px",
                 fontSize: "11px",
-                fontFamily: "'Lora', serif",
+                fontFamily: "'Vollkorn', serif",
                 fontWeight: 600,
                 letterSpacing: "1.5px",
                 textTransform: "uppercase",
                 color: "#1A1A1A",
                 background: "transparent",
                 cursor: "pointer",
-              }}>
+                transition: "background 0.2s, color 0.2s",
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.background = "#1A1A1A";
+                e.currentTarget.style.color = "#fff";
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.background = "transparent";
+                e.currentTarget.style.color = "#1A1A1A";
+              }}
+              >
                 Explore
               </button>
             </div>

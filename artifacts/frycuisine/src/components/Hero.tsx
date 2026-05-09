@@ -6,12 +6,10 @@ export function Hero() {
       className="relative text-white overflow-hidden"
       style={{ minHeight: "420px", backgroundColor: "#0D0D0D" }}
     >
-      {/* Full background food image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroImg})` }}
       />
-      {/* Dark gradient overlay — left side darker, right side lighter */}
       <div
         className="absolute inset-0"
         style={{
@@ -21,11 +19,10 @@ export function Hero() {
       />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-10 w-full grid md:grid-cols-2 gap-8 items-center py-14 md:py-16">
-        {/* LEFT: text content */}
         <div className="space-y-5">
           <h1
             style={{
-              fontFamily: "'Cormorant Garamond', 'Playfair Display', serif",
+              fontFamily: "'Cardo', serif",
               fontStyle: "italic",
               fontWeight: 700,
               fontSize: "clamp(28px, 4vw, 52px)",
@@ -38,7 +35,7 @@ export function Hero() {
 
           <p
             style={{
-              fontFamily: "'Lora', serif",
+              fontFamily: "'Noto Serif', serif",
               fontStyle: "italic",
               fontWeight: 400,
               fontSize: "15px",
@@ -59,7 +56,8 @@ export function Hero() {
                 padding: "10px 22px",
                 color: "#ffffff",
                 fontSize: "13px",
-                fontFamily: "'Lora', serif",
+                fontFamily: "'Nunito', sans-serif",
+                fontWeight: 600,
                 background: "transparent",
                 cursor: "pointer",
                 display: "flex",
@@ -93,7 +91,8 @@ export function Hero() {
                 padding: "10px 22px",
                 color: "#ffffff",
                 fontSize: "13px",
-                fontFamily: "'Lora', serif",
+                fontFamily: "'Nunito', sans-serif",
+                fontWeight: 600,
                 background: "transparent",
                 cursor: "pointer",
                 display: "flex",
@@ -122,7 +121,6 @@ export function Hero() {
           </div>
         </div>
 
-        {/* RIGHT: circular food image */}
         <div className="hidden md:flex justify-center items-center">
           <div
             style={{

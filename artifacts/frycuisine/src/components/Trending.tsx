@@ -38,10 +38,9 @@ export function Trending() {
   return (
     <section style={{ backgroundColor: "#F8F6F1", padding: "48px 24px 64px" }}>
       <div style={{ maxWidth: "960px", margin: "0 auto" }}>
-        {/* Section heading — left-aligned, large display font, no decorative lines */}
         <h2
           style={{
-            fontFamily: "'Cinzel Decorative', 'Cinzel', 'Cormorant Garamond', serif",
+            fontFamily: "'Cinzel Decorative', 'Cinzel', serif",
             fontWeight: 700,
             fontSize: "clamp(26px, 5vw, 46px)",
             color: "#1A1A1A",
@@ -54,7 +53,6 @@ export function Trending() {
           Trending Food Right Now
         </h2>
 
-        {/* 2x2 grid */}
         <div
           style={{
             display: "grid",
@@ -63,11 +61,7 @@ export function Trending() {
           }}
         >
           {trendingItems.map((item, idx) => (
-            <div
-              key={idx}
-              style={{ cursor: "pointer" }}
-            >
-              {/* Food image — full width, no rounded corners */}
+            <div key={idx} style={{ cursor: "pointer" }}>
               <div
                 style={{
                   width: "100%",
@@ -91,12 +85,11 @@ export function Trending() {
                 />
               </div>
 
-              {/* Card text — centered */}
               <div style={{ textAlign: "center", padding: "0 8px" }}>
-                {/* Title */}
+                {/* Title — Playfair Display (closest to Hatton) */}
                 <h3
                   style={{
-                    fontFamily: "'Cormorant Garamond', 'Playfair Display', serif",
+                    fontFamily: "'Playfair Display', serif",
                     fontStyle: "italic",
                     fontWeight: 600,
                     fontSize: "22px",
@@ -118,7 +111,7 @@ export function Trending() {
                     fontSize: "12px",
                     color: "#888",
                     marginBottom: "10px",
-                    fontFamily: "'Lora', serif",
+                    fontFamily: "'Noto Serif', serif",
                   }}
                 >
                   <span>{item.date}</span>
@@ -126,10 +119,10 @@ export function Trending() {
                   <span style={{ color: "#888" }}>{item.tag}</span>
                 </div>
 
-                {/* Description */}
+                {/* Description — Noto Serif */}
                 <p
                   style={{
-                    fontFamily: "'Lora', serif",
+                    fontFamily: "'Noto Serif', serif",
                     fontSize: "13.5px",
                     color: "#555555",
                     lineHeight: 1.65,
@@ -139,13 +132,12 @@ export function Trending() {
                   {item.desc}
                 </p>
 
-                {/* Read More */}
                 <a
                   href="#"
                   style={{
-                    fontFamily: "'Lora', serif",
+                    fontFamily: "'Nunito', sans-serif",
                     fontSize: "11px",
-                    fontWeight: 600,
+                    fontWeight: 700,
                     color: "#6E4B2A",
                     textDecoration: "none",
                     letterSpacing: "1.5px",
