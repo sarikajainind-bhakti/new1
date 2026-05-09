@@ -1,122 +1,202 @@
-export function WorldCuisine() {
-  const countries = [
-    { flag: "🇮🇳", name: "India",  dish: "Paneer Chicken Tikka" },
-    { flag: "🇰🇷", name: "Korea",  dish: "Tteok-bokki" },
-    { flag: "🇮🇹", name: "Italy",  dish: "Pasta Bolognese" },
-  ];
+import nasigorengImg from "../assets/nasigoreng.png";
+import momoImg from "../assets/momo.png";
+import heroImg from "../assets/hero.png";
 
+const countries = [
+  {
+    flag: "🇮🇳",
+    name: "India",
+    dishes: "Butter Chicken, Dosa",
+    image: nasigorengImg,
+  },
+  {
+    flag: "🇰🇷",
+    name: "Korea",
+    dishes: "Kimchi, Bibimbap",
+    image: momoImg,
+  },
+  {
+    flag: "🇮🇹",
+    name: "Italy",
+    dishes: "Pizza & Pasta",
+    image: heroImg,
+  },
+];
+
+function CurveLeft() {
   return (
-    <section style={{ backgroundColor: "#ffffff", padding: "40px 24px 48px" }}>
-      <div style={{ maxWidth: "860px", margin: "0 auto" }}>
+    <svg
+      width="80"
+      height="220"
+      viewBox="0 0 80 220"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      style={{ position: "absolute", left: 0, top: "50%", transform: "translateY(-50%)", opacity: 0.55 }}
+    >
+      <path
+        d="M70 10 C 40 30, 10 50, 30 80 C 50 110, 80 120, 60 150 C 40 180, 10 190, 30 215"
+        stroke="#B8966A"
+        strokeWidth="1.5"
+        fill="none"
+        strokeLinecap="round"
+      />
+      <path
+        d="M55 5 C 25 25, 5 55, 20 85 C 35 115, 65 125, 45 155 C 25 185, 5 200, 20 220"
+        stroke="#B8966A"
+        strokeWidth="1"
+        fill="none"
+        strokeLinecap="round"
+        opacity="0.5"
+      />
+      <circle cx="70" cy="10" r="3" fill="#B8966A" />
+      <circle cx="30" cy="215" r="3" fill="#B8966A" />
+    </svg>
+  );
+}
 
-        {/* Section title — Libre Baskerville, centred with dashed lines */}
+function CurveRight() {
+  return (
+    <svg
+      width="80"
+      height="220"
+      viewBox="0 0 80 220"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      style={{ position: "absolute", right: 0, top: "50%", transform: "translateY(-50%) scaleX(-1)", opacity: 0.55 }}
+    >
+      <path
+        d="M70 10 C 40 30, 10 50, 30 80 C 50 110, 80 120, 60 150 C 40 180, 10 190, 30 215"
+        stroke="#B8966A"
+        strokeWidth="1.5"
+        fill="none"
+        strokeLinecap="round"
+      />
+      <path
+        d="M55 5 C 25 25, 5 55, 20 85 C 35 115, 65 125, 45 155 C 25 185, 5 200, 20 220"
+        stroke="#B8966A"
+        strokeWidth="1"
+        fill="none"
+        strokeLinecap="round"
+        opacity="0.5"
+      />
+      <circle cx="70" cy="10" r="3" fill="#B8966A" />
+      <circle cx="30" cy="215" r="3" fill="#B8966A" />
+    </svg>
+  );
+}
+
+export function WorldCuisine() {
+  return (
+    <section style={{ backgroundColor: "#FAF7F2", padding: "44px 0 52px", position: "relative", overflow: "hidden" }}>
+
+      {/* Decorative curve lines */}
+      <CurveLeft />
+      <CurveRight />
+
+      <div style={{ maxWidth: "860px", margin: "0 auto", padding: "0 60px", position: "relative" }}>
+
+        {/* Section heading — Libre Baskerville with flanking lines + diamonds */}
         <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "36px" }}>
-          <div style={{ flex: 1, borderTop: "1px solid #bbb" }} />
-          <span style={{ color: "#bbb", fontSize: "14px" }}>✦</span>
+          <div style={{ flex: 1, borderTop: "1px solid #C4A882" }} />
+          <span style={{ color: "#C4A882", fontSize: "12px" }}>◆</span>
           <h2 style={{
             fontFamily: "'Libre Baskerville', serif",
             fontWeight: 700,
             fontSize: "clamp(14px, 2.2vw, 20px)",
             color: "#1A1A1A",
-            letterSpacing: "0.12em",
-            textTransform: "uppercase",
+            letterSpacing: "0.06em",
             whiteSpace: "nowrap",
           }}>
             World Famous Food by Country
           </h2>
-          <span style={{ color: "#bbb", fontSize: "14px" }}>✦</span>
-          <div style={{ flex: 1, borderTop: "1px solid #bbb" }} />
+          <span style={{ color: "#C4A882", fontSize: "12px" }}>◆</span>
+          <div style={{ flex: 1, borderTop: "1px solid #C4A882" }} />
         </div>
 
         {/* 3 country cards */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px" }}>
           {countries.map((item, idx) => (
-            <div key={idx} style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              textAlign: "center",
-              padding: "24px 16px 20px",
-              border: "1px solid #eee",
-              backgroundColor: "#fff",
-            }}>
-              {/* Flag circle */}
-              <div style={{
-                width: "72px",
-                height: "72px",
-                borderRadius: "50%",
-                border: "2px solid #e0d8cc",
+            <div
+              key={idx}
+              style={{
+                backgroundColor: "#fff",
+                border: "1px solid #EAE3D8",
+                overflow: "hidden",
                 display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontSize: "36px",
-                marginBottom: "12px",
-                backgroundColor: "#f9f6f1",
-              }}>
-                {item.flag}
+                flexDirection: "column",
+              }}
+            >
+              {/* Food image — full width */}
+              <div style={{ width: "100%", height: "190px", overflow: "hidden" }}>
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    display: "block",
+                    transition: "transform 0.4s ease",
+                  }}
+                  onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.05)")}
+                  onMouseLeave={e => (e.currentTarget.style.transform = "scale(1)")}
+                />
               </div>
 
-              {/* Country name — Playfair Display italic */}
-              <p style={{
-                fontFamily: "'Playfair Display', serif",
-                fontStyle: "italic",
-                fontSize: "17px",
-                color: "#6E4B2A",
-                marginBottom: "4px",
+              {/* Card body */}
+              <div style={{
+                padding: "18px 16px 20px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+                flex: 1,
               }}>
-                {item.name}
-              </p>
+                {/* Flag + Country name */}
+                <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                  <span style={{ fontSize: "22px", lineHeight: 1 }}>{item.flag}</span>
+                  <p style={{
+                    fontFamily: "'Playfair Display', serif",
+                    fontStyle: "italic",
+                    fontSize: "18px",
+                    color: "#6E4B2A",
+                    margin: 0,
+                  }}>
+                    {item.name}
+                  </p>
+                </div>
 
-              {/* Dish name — Playfair Display bold (Hatton substitute) */}
-              <h3 style={{
-                fontFamily: "'Playfair Display', serif",
-                fontWeight: 700,
-                fontSize: "14px",
-                color: "#1A1A1A",
-                marginBottom: "16px",
-                lineHeight: 1.4,
-              }}>
-                {item.dish}
-              </h3>
+                {/* Dishes */}
+                <p style={{
+                  fontFamily: "'Lora', serif",
+                  fontSize: "13px",
+                  color: "#555",
+                  lineHeight: 1.55,
+                  marginBottom: "16px",
+                }}>
+                  {item.dishes}
+                </p>
 
-              {/* Description — Lora */}
-              <p style={{
-                fontFamily: "'Lora', serif",
-                fontSize: "12px",
-                color: "#666",
-                lineHeight: 1.6,
-                marginBottom: "16px",
-              }}>
-                {item.name === "India" && "Rich, aromatic spices with creamy paneer and tikka masala."}
-                {item.name === "Korea" && "Spicy rice cakes in fiery sauce — Korea's beloved street food."}
-                {item.name === "Italy" && "Slow-simmered meat sauce with pasta, the Italian classic."}
-              </p>
-
-              {/* Explore button — Vollkorn */}
-              <button style={{
-                border: "1px solid #333",
-                padding: "7px 22px",
-                fontSize: "11px",
-                fontFamily: "'Vollkorn', serif",
-                fontWeight: 600,
-                letterSpacing: "1.5px",
-                textTransform: "uppercase",
-                color: "#1A1A1A",
-                background: "transparent",
-                cursor: "pointer",
-                transition: "background 0.2s, color 0.2s",
-              }}
-              onMouseEnter={e => {
-                e.currentTarget.style.background = "#1A1A1A";
-                e.currentTarget.style.color = "#fff";
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.background = "transparent";
-                e.currentTarget.style.color = "#1A1A1A";
-              }}
-              >
-                Explore
-              </button>
+                {/* READ MORE button */}
+                <button
+                  style={{
+                    backgroundColor: "#B5451B",
+                    color: "#fff",
+                    border: "none",
+                    padding: "9px 20px",
+                    fontFamily: "'Vollkorn', serif",
+                    fontWeight: 600,
+                    fontSize: "11px",
+                    letterSpacing: "1.8px",
+                    textTransform: "uppercase",
+                    cursor: "pointer",
+                    transition: "background-color 0.2s",
+                  }}
+                  onMouseEnter={e => (e.currentTarget.style.backgroundColor = "#8C3412")}
+                  onMouseLeave={e => (e.currentTarget.style.backgroundColor = "#B5451B")}
+                >
+                  Read More
+                </button>
+              </div>
             </div>
           ))}
         </div>
