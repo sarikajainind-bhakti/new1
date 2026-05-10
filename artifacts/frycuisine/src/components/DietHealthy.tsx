@@ -1,139 +1,81 @@
-import avocadoImg from "../assets/avocado.png";
-import proteinbowlImg from "../assets/proteinbowl.png";
-import greensaladImg from "../assets/greensalad.png";
-
 const items = [
   {
     category: "Weight Loss Diet Foods",
     title: "Quinoa Veg Salad Bowl",
     desc: "Fresh vegetables with quinoa and light dressing. Perfect for healthy weight loss and clean eating.",
-    image: greensaladImg,
+    image: "/images/H13.png",
   },
   {
     category: "High Protein Diet Foods",
     title: "Paneer Protein Power Bowl",
     desc: "High protein paneer with veggies and healthy options. Keeps you full and boosts energy.",
-    image: proteinbowlImg,
+    image: "/images/H14.png",
   },
   {
     category: "Keto Food List",
     title: "Avocado Egg Keto Plate",
     desc: "Low carb avocado and eggs for keto lifestyle. Supports fat burning and steady energy.",
-    image: avocadoImg,
+    image: "/images/H15.png",
   },
 ];
 
 export function DietHealthy() {
   return (
-    <section style={{ backgroundColor: "#F8F6F1", padding: "52px 24px 60px" }}>
-      <div style={{ maxWidth: "900px", margin: "0 auto" }}>
-
-        {/* Heading */}
-        <h2 style={{
-          fontFamily: "'Cinzel Decorative', 'Cinzel', serif",
-          fontWeight: 700,
-          fontSize: "clamp(18px, 3.2vw, 32px)",
-          color: "#1A1A1A",
-          textTransform: "uppercase",
-          letterSpacing: "0.05em",
-          textAlign: "center",
-          marginBottom: "40px",
-          lineHeight: 1.25,
-        }}>
-          Diet &amp; Healthy Food Guides
+    <section className="bg-[#FAF9F6] py-16 px-6">
+      <div className="max-w-[1200px] mx-auto">
+        <h2
+          className="text-center font-bold mb-12 uppercase tracking-widest"
+          style={{
+            fontFamily: "'Playfair Display', serif",
+            fontSize: "36px",
+            color: "#1A1A1A",
+          }}
+        >
+          Diet & Healthy Food Guides
         </h2>
 
-        {/* 3-card grid */}
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
-          gap: "24px",
-        }}>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {items.map((item, idx) => (
             <div
               key={idx}
-              style={{
-                backgroundColor: "#ffffff",
-                overflow: "hidden",
-                boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
-                cursor: "pointer",
-              }}
+              className="bg-white group cursor-pointer shadow-md hover:shadow-xl transition-all duration-300"
             >
-              {/* Image */}
-              <div style={{ width: "100%", height: "200px", overflow: "hidden" }}>
+              <div className="h-[240px] overflow-hidden">
                 <img
                   src={item.image}
                   alt={item.title}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    display: "block",
-                    transition: "transform 0.4s ease",
-                  }}
-                  onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.05)")}
-                  onMouseLeave={e => (e.currentTarget.style.transform = "scale(1)")}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
 
-              {/* Card body */}
-              <div style={{ padding: "20px 18px 22px" }}>
-                {/* Category label */}
-                <p style={{
-                  fontFamily: "'Lora', serif",
-                  fontWeight: 700,
-                  fontSize: "13px",
-                  color: "#1A1A1A",
-                  textTransform: "uppercase",
-                  letterSpacing: "0.04em",
-                  marginBottom: "8px",
-                }}>
+              <div className="p-8">
+                <p 
+                  className="text-[11px] text-[#8B2611] uppercase tracking-[0.2em] font-bold mb-4"
+                  style={{ fontFamily: "'Nunito', sans-serif" }}
+                >
                   {item.category}
                 </p>
-
-                {/* Recipe title — italic, underlined, brown */}
-                <h3 style={{
-                  fontFamily: "'Cormorant Garamond', 'Playfair Display', serif",
-                  fontStyle: "italic",
-                  fontWeight: 600,
-                  fontSize: "17px",
-                  color: "#6E4B2A",
-                  textDecoration: "underline",
-                  textDecorationColor: "#6E4B2A",
-                  marginBottom: "10px",
-                  lineHeight: 1.35,
-                }}>
+                
+                <h3
+                  className="text-xl font-semibold italic mb-4 underline decoration-[#D4A017] underline-offset-8"
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    color: "#1A1A1A",
+                  }}
+                >
                   {item.title}
                 </h3>
 
-                {/* Description */}
-                <p style={{
-                  fontFamily: "'Lora', serif",
-                  fontSize: "12.5px",
-                  color: "#666666",
-                  lineHeight: 1.65,
-                  marginBottom: "18px",
-                }}>
+                <p
+                  className="text-gray-500 leading-relaxed text-sm mb-8"
+                  style={{ fontFamily: "'Noto Serif', serif" }}
+                >
                   {item.desc}
                 </p>
 
-                {/* Read More button */}
                 <button
-                  style={{
-                    backgroundColor: "#4A2C1A",
-                    color: "#ffffff",
-                    border: "none",
-                    padding: "9px 22px",
-                    fontFamily: "'Lora', serif",
-                    fontWeight: 700,
-                    fontSize: "11px",
-                    letterSpacing: "1.8px",
-                    textTransform: "uppercase",
-                    cursor: "pointer",
-                    transition: "background-color 0.2s",
-                  }}
-                  onMouseEnter={e => (e.currentTarget.style.backgroundColor = "#6E4B2A")}
-                  onMouseLeave={e => (e.currentTarget.style.backgroundColor = "#4A2C1A")}
+                  className="bg-black text-white px-8 py-2.5 text-[10px] uppercase tracking-widest font-bold hover:bg-[#8B2611] transition-colors"
+                  style={{ fontFamily: "'Nunito', sans-serif" }}
                 >
                   Read More
                 </button>
@@ -145,3 +87,4 @@ export function DietHealthy() {
     </section>
   );
 }
+

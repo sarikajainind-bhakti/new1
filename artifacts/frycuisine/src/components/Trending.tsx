@@ -1,32 +1,27 @@
-import corndogsImg from "../assets/corndogs.png";
-import chocolateImg from "../assets/chocolate.png";
-import momoImg from "../assets/momo.png";
-import pancakesImg from "../assets/pancakes.png";
-
 const trendingItems = [
   {
-    image: corndogsImg,
+    image: "/images/H2.jpg",
     title: "Korean Corn Dogs",
     date: "January 1, 2026",
     tag: "Trending",
     desc: "Crispy outside, cheesy inside! Golden fried corn dogs with gooey cheese and bold Korean flavors.",
   },
   {
-    image: chocolateImg,
+    image: "/images/H3.webp",
     title: "Dubai Chocolate Bar",
     date: "January 1, 2026",
     tag: "Trending",
     desc: "Luxury in every bite Rich chocolate layered with premium fillings inspired by Dubai desserts.",
   },
   {
-    image: momoImg,
+    image: "/images/H31.png",
     title: "Viral Street Momo",
     date: "January 2, 2026",
     tag: "Trending",
     desc: "The internet's favorite street snack Juicy Momo tossed in spicy sauces, full of desi street-style flavor.",
   },
   {
-    image: pancakesImg,
+    image: "/images/H5.png",
     title: "Japanese Soufflé Pancakes",
     date: "January 2, 2026",
     tag: "Trending",
@@ -36,118 +31,61 @@ const trendingItems = [
 
 export function Trending() {
   return (
-    <section style={{ backgroundColor: "#F8F6F1", padding: "48px 24px 64px" }}>
-      <div style={{ maxWidth: "960px", margin: "0 auto" }}>
+    <section className="bg-white py-16 px-6">
+      <div className="max-w-[1200px] mx-auto">
         <h2
+          className="text-center font-bold mb-12"
           style={{
-            fontFamily: "'Cinzel Decorative', 'Cinzel', serif",
-            fontWeight: 700,
-            fontSize: "clamp(26px, 5vw, 46px)",
+            fontFamily: "'Playfair Display', serif",
+            fontSize: "42px",
             color: "#1A1A1A",
-            letterSpacing: "0.04em",
-            textTransform: "uppercase",
-            marginBottom: "36px",
-            lineHeight: 1.1,
           }}
         >
           Trending Food Right Now
         </h2>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)",
-            gap: "48px 40px",
-          }}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
           {trendingItems.map((item, idx) => (
-            <div key={idx} style={{ cursor: "pointer" }}>
-              <div
-                style={{
-                  width: "100%",
-                  aspectRatio: "4/3",
-                  overflow: "hidden",
-                  marginBottom: "18px",
-                }}
-              >
+            <div key={idx} className="group cursor-pointer">
+              <div className="relative overflow-hidden mb-6 aspect-[4/3]">
                 <img
                   src={item.image}
                   alt={item.title}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    display: "block",
-                    transition: "transform 0.5s ease",
-                  }}
-                  onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.04)")}
-                  onMouseLeave={e => (e.currentTarget.style.transform = "scale(1)")}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
+                <div className="absolute top-4 left-4 bg-white/90 px-4 py-1 text-[10px] uppercase tracking-widest font-bold text-black">
+                  {item.tag}
+                </div>
               </div>
 
-              <div style={{ textAlign: "center", padding: "0 8px" }}>
-                {/* Title — Playfair Display (closest to Hatton) */}
+              <div className="text-center px-4">
                 <h3
+                  className="text-2xl font-semibold italic mb-3"
                   style={{
                     fontFamily: "'Playfair Display', serif",
-                    fontStyle: "italic",
-                    fontWeight: 600,
-                    fontSize: "22px",
-                    color: "#6E4B2A",
-                    marginBottom: "8px",
-                    lineHeight: 1.3,
+                    color: "#8B4513",
                   }}
                 >
                   {item.title}
                 </h3>
 
-                {/* Date + Tag */}
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    gap: "6px",
-                    fontSize: "12px",
-                    color: "#888",
-                    marginBottom: "10px",
-                    fontFamily: "'Noto Serif', serif",
-                  }}
-                >
+                <div className="flex items-center justify-center gap-3 text-[12px] text-gray-400 mb-4 font-serif italic">
                   <span>{item.date}</span>
-                  <span style={{ color: "#ccc" }}>•</span>
-                  <span style={{ color: "#888" }}>{item.tag}</span>
+                  <span className="w-1 h-1 bg-gray-300 rounded-full" />
+                  <span>{item.tag}</span>
                 </div>
 
-                {/* Description — Noto Serif */}
                 <p
-                  style={{
-                    fontFamily: "'Noto Serif', serif",
-                    fontSize: "13.5px",
-                    color: "#555555",
-                    lineHeight: 1.65,
-                    marginBottom: "14px",
-                  }}
+                  className="text-gray-600 leading-relaxed text-[15px] mb-5"
+                  style={{ fontFamily: "'Noto Serif', serif" }}
                 >
                   {item.desc}
                 </p>
 
                 <a
                   href="#"
-                  style={{
-                    fontFamily: "'Nunito', sans-serif",
-                    fontSize: "11px",
-                    fontWeight: 700,
-                    color: "#6E4B2A",
-                    textDecoration: "none",
-                    letterSpacing: "1.5px",
-                    textTransform: "uppercase",
-                    borderBottom: "1px solid transparent",
-                    paddingBottom: "2px",
-                    transition: "border-color 0.2s",
-                  }}
-                  onMouseEnter={e => (e.currentTarget.style.borderColor = "#6E4B2A")}
-                  onMouseLeave={e => (e.currentTarget.style.borderColor = "transparent")}
+                  className="inline-block text-[11px] font-bold uppercase tracking-widest border-b border-transparent hover:border-current transition-all"
+                  style={{ fontFamily: "'Nunito', sans-serif", color: "#8B4513" }}
                 >
                   Read More...
                 </a>
@@ -159,3 +97,4 @@ export function Trending() {
     </section>
   );
 }
+

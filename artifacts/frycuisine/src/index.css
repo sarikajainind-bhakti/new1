@@ -18,9 +18,10 @@
   --color-accent: hsl(var(--accent));
   --color-accent-foreground: hsl(var(--accent-foreground));
 
-  --font-sans: 'Inter', sans-serif;
+  --font-sans: 'Nunito', sans-serif;
   --font-serif: 'Playfair Display', serif;
-  --font-script: 'Great Vibes', cursive;
+  --font-ornamental: 'Cinzel Decorative', serif;
+  --font-noto: 'Noto Serif', serif;
 }
 
 :root {
@@ -31,29 +32,13 @@
   --input: 214.3 31.8% 91.4%;
   --ring: 222.2 84% 4.9%;
 
-  --primary: 34 26% 23%;
+  /* Dark Brown/Red from PDF */
+  --primary: 9 78% 30%; /* #8B2611 */
   --primary-foreground: 0 0% 100%;
 
-  --accent: 43 82% 46%; /* #D4A017 approx */
+  --accent: 43 82% 46%;
   --accent-foreground: 0 0% 100%;
   
-  --card: 0 0% 100%;
-  --card-foreground: 222.2 84% 4.9%;
-  --card-border: 214.3 31.8% 91.4%;
-  
-  --popover: 0 0% 100%;
-  --popover-foreground: 222.2 84% 4.9%;
-  --popover-border: 214.3 31.8% 91.4%;
-  
-  --secondary: 210 40% 96.1%;
-  --secondary-foreground: 222.2 47.4% 11.2%;
-  
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215.4 16.3% 46.9%;
-  
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 210 40% 98%;
-
   --radius: 0.5rem;
 }
 
@@ -62,6 +47,7 @@
     @apply border-border;
   }
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply font-sans antialiased bg-white text-[#1A1A1A];
   }
 }
+

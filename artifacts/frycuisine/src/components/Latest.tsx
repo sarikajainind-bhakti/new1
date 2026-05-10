@@ -1,106 +1,73 @@
-import nasigorengImg from "../assets/nasigoreng.png";
-import avocadoImg from "../assets/avocado.png";
-import proteinbowlImg from "../assets/proteinbowl.png";
-import greensaladImg from "../assets/greensalad.png";
-import breakfastImg from "../assets/breakfast.png";
-import corndogsImg from "../assets/corndogs.png";
-import chocolateImg from "../assets/chocolate.png";
-import momoImg from "../assets/momo.png";
-import pancakesImg from "../assets/pancakes.png";
-import heroImg from "../assets/hero.png";
-
 const posts = [
-  { tag: "Trending Food", date: "Jan 25", title: "Mexican Street Tacos", desc: "Spicy fillings wrapped in soft tortillas with cilantro and lime.", image: momoImg, imgH: 190 },
-  { tag: "Street Food", date: "Jan 20", title: "Creamy Butter Chicken", desc: "Slow-cooked chicken in velvety butter sauce with aromatic spices.", image: heroImg, imgH: 130 },
-  { tag: "Diet Time", date: "Jan 15", title: "Spinach Salad Bowl", desc: "Fresh spinach with strawberries, walnuts and balsamic dressing.", image: greensaladImg, imgH: 165 },
-  { tag: "Trending Food", date: "Jan 12", title: "Creamy Chicken Korma", desc: "Rich north Indian curry with tender chicken in cashew cream base.", image: nasigorengImg, imgH: 140 },
-  { tag: "Trending Food", date: "Jan 25", title: "Chocolate Lava Cake", desc: "Decadent molten chocolate center — warm, rich and irresistible.", image: chocolateImg, imgH: 145 },
-  { tag: "Street Food", date: "Jan 20", title: "Samosa Chaat", desc: "Crispy samosas topped with chutneys, yoghurt and pomegranate.", image: breakfastImg, imgH: 175 },
-  { tag: "Trending Food", date: "Jan 22", title: "Spicy Avocado Toast", desc: "Creamy avocado on sourdough with chilli flakes and poached egg.", image: avocadoImg, imgH: 120 },
-  { tag: "Street Food", date: "Jan 10", title: "Loaded Veggie Sandwich", desc: "Grilled multi-grain sandwich packed with veggies, cheese and mayo.", image: corndogsImg, imgH: 150 },
-  { tag: "Diet Time", date: "Jan 8", title: "Dark Chocolate Bar", desc: "No-bake bars with dark chocolate, oats, chia seeds and honey.", image: pancakesImg, imgH: 180 },
-  { tag: "Street Food", date: "Jan 18", title: "Oats Breakfast Bowl", desc: "Wholesome bowl with oats, banana, berries, almond butter and honey.", image: proteinbowlImg, imgH: 135 },
-  { tag: "Trending Food", date: "Jan 5", title: "Trending Momo Dumplings", desc: "Steamed dumplings with seasoned filling served with fiery chilli sauce.", image: momoImg, imgH: 160 },
-  { tag: "Trending Food", date: "Jan 3", title: "Afghani Biryani", desc: "Fragrant rice layered with saffron, nuts and slow-braised tender meat.", image: heroImg, imgH: 145 },
+  { tag: "Trending Food", date: "Jan 25", title: "Mexican Street Tacos", desc: "Spicy fillings wrapped in soft tortillas with cilantro and lime.", image: "/images/H24.png", imgH: 180 },
+  { tag: "Diet Time", date: "Jan 20", title: "Power of Avocado Salad", desc: "Fresh avocado, cherry tomatoes, and seeds with lemon dressing.", image: "/images/H25.png", imgH: 140 },
+  { tag: "Trending Food", date: "Jan 18", title: "Chocolate Lava Cake", desc: "Decadent molten center warm, rich and irresistible.", image: "/images/H26.png", imgH: 160 },
+  { tag: "Trending Food", date: "Jan 15", title: "Creamy Pasta Alfredo", desc: "Rich white sauce pasta with garlic, herbs and parmesan.", image: "/images/H27.png", imgH: 130 },
+  { tag: "Street Food", date: "Jan 12", title: "Spicy Samosa Chaat", desc: "Crispy samosas topped with chutneys, yoghurt and pomegranate.", image: "/images/H28.png", imgH: 170 },
+  { tag: "Fast Food", date: "Jan 10", title: "Cheese Burst Burger", desc: "Juicy patty with layers of cheese and fresh veggies.", image: "/images/H29.png", imgH: 150 },
+  { tag: "Trending Food", date: "Jan 8", title: "Spicy Chicken Ramen", desc: "Bold broth with tender chicken, noodles and soft-boiled egg.", image: "/images/H30.png", imgH: 145 },
+  { tag: "Street Food", date: "Jan 5", title: "Steamed Veg Momos", desc: "Juicy vegetable dumplings served with spicy tomato chutney.", image: "/images/H31.png", imgH: 190 },
+  { tag: "Diet Time", date: "Jan 3", title: "Oats & Fruit Breakfast Bowl", desc: "Wholesome oats topped with seasonal fruits and nuts.", image: "/images/H32.png", imgH: 135 },
+  { tag: "Diet Time", date: "Jan 2", title: "Sprouts Salad Bowl", desc: "High-protein sprouts mixed with crunchy vegetables.", image: "/images/H33.png", imgH: 155 },
+  { tag: "Trending Food", date: "Jan 1", title: "Creamy Mushroom Pasta", desc: "Earthy mushrooms in a light, silky cream sauce.", image: "/images/H34.png", imgH: 165 },
+  { tag: "Street Food", date: "Dec 30", title: "Loaded Veggie Sandwich", desc: "Grilled multi-grain sandwich packed with fresh vegetables.", image: "/images/H35.png", imgH: 140 },
+  { tag: "Diet Time", date: "Dec 28", title: "Dark Chocolate Bar", desc: "Healthy dark chocolate bars with oats and chia seeds.", image: "/images/H36.png", imgH: 175 },
+  { tag: "Trending Food", date: "Dec 25", title: "Hyderabadi Biryani", desc: "Fragrant rice layered with tender meat and exotic spices.", image: "/images/H37.png", imgH: 150 },
 ];
 
 export function Latest() {
   return (
-    <section style={{ backgroundColor: "#F8F6F1", padding: "44px 20px 52px" }}>
-      <div style={{ maxWidth: "960px", margin: "0 auto" }}>
-
-        {/* Heading */}
-        <div style={{ marginBottom: "28px" }}>
-          <span style={{
-            fontFamily: "'Lora', serif",
-            fontWeight: 400,
-            fontSize: "18px",
-            color: "#999",
-            textTransform: "uppercase",
-            letterSpacing: "0.12em",
-          }}>
+    <section className="bg-[#FAF9F6] py-16 px-6">
+      <div className="max-w-[1200px] mx-auto">
+        {/* Header */}
+        <div className="mb-10 text-left">
+          <span className="text-xl text-gray-400 uppercase tracking-widest font-serif">
             Latest from{" "}
           </span>
-          <span style={{
-            fontFamily: "'Great Vibes', cursive",
-            fontSize: "46px",
-            color: "#1A1A1A",
-            verticalAlign: "middle",
-            lineHeight: 1,
-          }}>
+          <span 
+            className="text-5xl md:text-6xl text-[#1A1A1A]"
+            style={{ fontFamily: "'Great Vibes', cursive" }}
+          >
             frycuisine
           </span>
         </div>
 
-        {/* True CSS masonry — 4 columns */}
-        <div style={{ columns: 4, columnGap: "12px" }}>
+        {/* Masonry-style Grid */}
+        <div className="columns-2 md:columns-5 gap-4">
           {posts.map((post, idx) => (
-            <div
-              key={idx}
-              style={{
-                breakInside: "avoid",
-                marginBottom: "12px",
-                backgroundColor: "#ffffff",
-                overflow: "hidden",
-                cursor: "pointer",
-              }}
+            <div 
+              key={idx} 
+              className="break-inside-avoid mb-4 bg-white shadow-sm hover:shadow-md transition-shadow duration-300 group cursor-pointer"
             >
-              <div style={{ width: "100%", height: `${post.imgH}px`, overflow: "hidden" }}>
+              <div 
+                className="overflow-hidden"
+                style={{ height: `${post.imgH}px` }}
+              >
                 <img
                   src={post.image}
                   alt={post.title}
-                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-                  onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.05)")}
-                  onMouseLeave={e => (e.currentTarget.style.transform = "scale(1)")}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              <div style={{ padding: "8px 10px 10px" }}>
-                {/* Tag + date */}
-                <div style={{ fontSize: "9px", fontFamily: "'Lora', serif", color: "#A67C52", textTransform: "uppercase", letterSpacing: "0.7px", marginBottom: "4px", display: "flex", gap: "5px" }}>
+
+              <div className="p-4">
+                <div className="flex items-center gap-2 text-[9px] uppercase tracking-widest font-bold text-[#8B4513] mb-2">
                   <span>{post.tag}</span>
-                  <span style={{ color: "#ccc" }}>•</span>
-                  <span style={{ color: "#aaa" }}>{post.date}</span>
+                  <span className="w-1 h-1 bg-gray-200 rounded-full" />
+                  <span className="text-gray-400">{post.date}</span>
                 </div>
-                {/* Title */}
-                <h3 style={{
-                  fontFamily: "'Cormorant Garamond', serif",
-                  fontStyle: "italic",
-                  fontWeight: 600,
-                  fontSize: "13px",
-                  color: "#1A1A1A",
-                  lineHeight: 1.35,
-                  marginBottom: "4px",
-                }}>
+
+                <h3 
+                  className="text-[14px] font-semibold italic text-[#1A1A1A] leading-snug mb-2"
+                  style={{ fontFamily: "'Playfair Display', serif" }}
+                >
                   {post.title}
                 </h3>
-                {/* Description */}
-                <p style={{
-                  fontFamily: "'Lora', serif",
-                  fontSize: "10.5px",
-                  color: "#777",
-                  lineHeight: 1.5,
-                  margin: 0,
-                }}>
+
+                <p 
+                  className="text-[11px] text-gray-500 leading-relaxed"
+                  style={{ fontFamily: "'Noto Serif', serif" }}
+                >
                   {post.desc}
                 </p>
               </div>
@@ -111,3 +78,4 @@ export function Latest() {
     </section>
   );
 }
+

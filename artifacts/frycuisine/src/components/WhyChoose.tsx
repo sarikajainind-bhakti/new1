@@ -1,71 +1,48 @@
-import heroImg from "../assets/hero.png";
-import avocadoImg from "../assets/avocado.png";
-import greensaladImg from "../assets/greensalad.png";
-import momoImg from "../assets/momo.png";
-
 export function WhyChoose() {
   return (
-    <section style={{ backgroundColor: "#ffffff", padding: "52px 24px 60px" }}>
-      <div style={{
-        maxWidth: "900px",
-        margin: "0 auto",
-        display: "grid",
-        gridTemplateColumns: "1fr 1fr",
-        gap: "48px",
-        alignItems: "center",
-      }}>
-
-        {/* LEFT: image collage */}
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gridTemplateRows: "1fr 1fr",
-          gap: "8px",
-          height: "340px",
-        }}>
-          <div style={{ gridRow: "1 / 3", overflow: "hidden" }}>
-            <img src={heroImg} alt="food" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
-          </div>
-          <div style={{ overflow: "hidden" }}>
-            <img src={avocadoImg} alt="food" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
-          </div>
-          <div style={{ overflow: "hidden" }}>
-            <img src={momoImg} alt="food" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
-          </div>
-        </div>
-
-        {/* RIGHT: text */}
-        <div>
-          <h2 style={{
-            fontFamily: "'Cormorant Garamond', 'Playfair Display', serif",
-            fontWeight: 700,
-            fontSize: "clamp(20px, 3vw, 30px)",
-            color: "#1A1A1A",
-            lineHeight: 1.3,
-            marginBottom: "18px",
-          }}>
-            Why Food Lovers Choose Fry Cuisine
+    <section className="bg-white py-20 px-6 md:px-12">
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        {/* Left Content */}
+        <div className="space-y-6">
+          <h2
+            className="text-4xl md:text-5xl font-bold text-[#1A1A1A]"
+            style={{ fontFamily: "'Playfair Display', serif" }}
+          >
+            Why FryCuisine?
           </h2>
 
-          <p style={{
-            fontFamily: "'Lora', serif",
-            fontSize: "14px",
-            color: "#555555",
-            lineHeight: 1.75,
-            marginBottom: "14px",
-          }}>
-            At FryCuisine, we believe that food is more than just sustenance — it's an experience, a culture, and a way of bringing people together. Our premium digital food magazine explores the intersection of global culinary traditions and modern dining trends.
-          </p>
-          <p style={{
-            fontFamily: "'Lora', serif",
-            fontSize: "14px",
-            color: "#555555",
-            lineHeight: 1.75,
-          }}>
-            Whether you're searching for the internet's latest viral sensations, authentic street food recipes from bustling Asian markets, or balanced, nutritious diet plans — we curate the best gastronomic content for the modern food enthusiast.
-          </p>
+          <div className="space-y-6 text-[#555555] leading-loose text-lg" style={{ fontFamily: "'Noto Serif', serif" }}>
+            <p>
+              Food is more than just a meal — it's an experience, a culture, and a way of life. At FryCuisine, we bring you the perfect blend of trending global flavors, authentic traditional recipes, and healthy lifestyle choices.
+            </p>
+            <p>
+              Whether you're looking for the latest viral dish, a comforting home-cooked meal, or expert tips on mindful eating, we've got you covered. Our mission is to celebrate food in all its forms, making it easier for you to discover, cook, and enjoy every bite.
+            </p>
+          </div>
+          
+          <button 
+            className="mt-4 px-10 py-3 bg-[#8B2611] text-white uppercase tracking-widest font-bold text-xs hover:bg-black transition-colors"
+            style={{ fontFamily: "'Nunito', sans-serif" }}
+          >
+            Learn More
+          </button>
+        </div>
+
+        {/* Right Image Collage */}
+        <div className="relative h-[450px] md:h-[550px] group">
+          <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl">
+            <img
+              src="/images/H38.png"
+              alt="Food Collage"
+              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+            />
+          </div>
+          {/* Decorative elements */}
+          <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-[#D4A017]/10 rounded-full blur-2xl" />
+          <div className="absolute -top-6 -right-6 w-40 h-40 bg-[#8B2611]/5 rounded-full blur-3xl" />
         </div>
       </div>
     </section>
   );
 }
+
