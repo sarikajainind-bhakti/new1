@@ -3,19 +3,19 @@ const countries = [
     flag: "🇮🇳",
     name: "India",
     dishes: "Butter Chicken, Dosa",
-    image: "/images/H6.png",
+    image: "./images/H6.png",
   },
   {
     flag: "🇰🇷",
     name: "Korea",
     dishes: "Kimchi, Bibimbap",
-    image: "/images/H7.png",
+    image: "./images/H7.png",
   },
   {
     flag: "🇮🇹",
     name: "Italy",
     dishes: "Pizza & Pasta",
-    image: "/images/H8.jpg",
+    image: "./images/H8.jpg",
   },
 ];
 

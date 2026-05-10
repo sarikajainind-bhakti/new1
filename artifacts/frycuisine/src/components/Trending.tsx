@@ -1,27 +1,27 @@
 const trendingItems = [
   {
-    image: "/images/H2.jpg",
+    image: "./images/H2.jpg",
     title: "Korean Corn Dogs",
     date: "January 1, 2026",
     tag: "Trending",
     desc: "Crispy outside, cheesy inside! Golden fried corn dogs with gooey cheese and bold Korean flavors.",
   },
   {
-    image: "/images/H3.webp",
+    image: "./images/H3.webp",
     title: "Dubai Chocolate Bar",
     date: "January 1, 2026",
     tag: "Trending",
     desc: "Luxury in every bite Rich chocolate layered with premium fillings inspired by Dubai desserts.",
   },
   {
-    image: "/images/H31.png",
+    image: "./images/H31.png",
     title: "Viral Street Momo",
     date: "January 2, 2026",
     tag: "Trending",
     desc: "The internet's favorite street snack Juicy Momo tossed in spicy sauces, full of desi street-style flavor.",
   },
   {
-    image: "/images/H5.png",
+    image: "./images/H5.png",
     title: "Japanese Soufflé Pancakes",
     date: "January 2, 2026",
     tag: "Trending",

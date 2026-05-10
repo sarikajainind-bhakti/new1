@@ -32,7 +32,7 @@ export function WhyChoose() {
         <div className="relative h-[450px] md:h-[550px] group">
           <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl">
             <img
-              src="/images/H38.png"
+              src="./images/H38.png"
               alt="Food Collage"
               className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
             />
