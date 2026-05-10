@@ -34,7 +34,7 @@ export function DietHealthy() {
           Diet & Healthy Food Guides
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
           {items.map((item, idx) => (
             <div
               key={idx}
@@ -80,6 +80,31 @@ export function DietHealthy() {
                   Read More
                 </button>
               </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Guides Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+          {[
+            { title: "Weight Loss Food Guide", icon: "🥗" },
+            { title: "High Protein Diet Guide", icon: "🍗" },
+            { title: "Low Carb Diet Guide", icon: "🥑" },
+            { title: "Keto Diet Guide", icon: "🥚" },
+          ].map((guide, idx) => (
+            <div 
+              key={idx}
+              className="bg-white p-6 border border-[#EAE3D8] flex items-center gap-4 hover:border-[#D4A017] transition-all cursor-pointer group shadow-sm"
+            >
+              <div className="w-12 h-12 bg-[#FAF9F6] rounded-full flex items-center justify-center text-2xl group-hover:bg-[#D4A017]/10 transition-colors">
+                {guide.icon}
+              </div>
+              <h4 
+                className="text-sm font-bold uppercase tracking-wider text-[#1A1A1A]"
+                style={{ fontFamily: "'Alice', serif" }}
+              >
+                {guide.title}
+              </h4>
             </div>
           ))}
         </div>

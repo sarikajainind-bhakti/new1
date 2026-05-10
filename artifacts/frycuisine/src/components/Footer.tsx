@@ -2,8 +2,14 @@ import { Instagram, Facebook, Youtube, Send } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-[#000000] text-white py-16 px-6 md:px-12 border-t border-white/10">
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+    <footer className="relative bg-[#000000] text-white py-16 px-6 md:px-12 border-t border-white/10 overflow-hidden">
+      <div 
+        className="absolute inset-0 bg-cover bg-center opacity-30 grayscale"
+        style={{ backgroundImage: "url('./images/H39.png')" }}
+      />
+      <div className="absolute inset-0 bg-black/60" />
+      
+      <div className="relative z-10 max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
         {/* Brand Column */}
         <div className="md:col-span-1 space-y-6">
           <div 

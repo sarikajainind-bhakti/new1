@@ -1,21 +1,19 @@
-import { Search, X } from "lucide-react";
+import { Search, X, Utensils } from "lucide-react";
 
 export function Header() {
   return (
     <header 
-      className="bg-[#000000] text-white py-4 px-6 md:px-12 flex flex-col items-center relative z-20"
+      className="bg-[#000000] text-white py-6 px-6 md:px-12 flex flex-col items-center relative z-20"
       style={{ borderBottom: "1px solid rgba(255,255,255,0.1)" }}
     >
-      <div className="w-full max-w-[1200px] flex justify-between items-center mb-5">
+      <div className="w-full max-w-[1200px] flex justify-between items-center mb-8">
         {/* Logo Section */}
-        <div className="flex items-center gap-3">
-          <div className="flex flex-col gap-[2px]">
-             <div className="w-6 h-[2px] bg-white"></div>
-             <div className="w-4 h-[2px] bg-white"></div>
-             <div className="w-6 h-[2px] bg-white"></div>
+        <div className="flex items-center gap-4">
+          <div className="bg-[#D4A017] p-2 rounded-lg">
+            <Utensils className="w-6 h-6 text-black" />
           </div>
           <div 
-            className="text-3xl tracking-tight"
+            className="text-4xl tracking-tight"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             <span className="font-bold">fry</span>
@@ -24,14 +22,13 @@ export function Header() {
         </div>
 
         {/* Search Bar */}
-        <div className="flex items-center bg-[#2A2A2A] rounded-md px-4 py-2 w-72 border border-white/10">
-          <Search className="w-4 h-4 text-gray-400 mr-2" />
+        <div className="hidden md:flex items-center bg-[#1A1A1A] rounded-full px-5 py-2.5 w-80 border border-white/10 shadow-inner">
+          <Search className="w-4 h-4 text-gray-400 mr-3" />
           <input
             type="text"
-            className="bg-transparent border-none outline-none text-sm w-full text-white placeholder:text-gray-500"
-            placeholder=""
+            className="bg-transparent border-none outline-none text-xs w-full text-white placeholder:text-gray-600 tracking-wider uppercase"
+            placeholder="Search recipes..."
           />
-          <X className="w-4 h-4 text-gray-500 ml-2 cursor-pointer hover:text-white transition-colors" />
         </div>
       </div>
 

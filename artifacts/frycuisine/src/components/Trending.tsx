@@ -44,51 +44,49 @@ export function Trending() {
           Trending Food Right Now
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
-          {trendingItems.map((item, idx) => (
-            <div key={idx} className="group cursor-pointer">
-              <div className="relative overflow-hidden mb-6 aspect-[4/3]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          {trendingItems.slice(0, 2).map((item, idx) => (
+            <div key={idx} className="group cursor-pointer bg-[#FAF9F6] border border-[#EAE3D8] shadow-sm hover:shadow-lg transition-all duration-500 overflow-hidden">
+              <div className="relative overflow-hidden h-[300px]">
                 <img
                   src={item.image}
                   alt={item.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute top-4 left-4 bg-white/90 px-4 py-1 text-[10px] uppercase tracking-widest font-bold text-black">
+                <div className="absolute top-6 left-6 bg-[#8B2611] text-white px-5 py-1.5 text-[10px] uppercase tracking-[0.25em] font-bold shadow-lg">
                   {item.tag}
                 </div>
               </div>
 
-              <div className="text-center px-4">
+              <div className="p-10 text-center">
                 <h3
-                  className="text-2xl font-semibold italic mb-3"
+                  className="text-3xl font-semibold italic mb-6 text-[#1A1A1A]"
                   style={{
                     fontFamily: "'Playfair Display', serif",
-                    color: "#8B4513",
                   }}
                 >
                   {item.title}
                 </h3>
 
-                <div className="flex items-center justify-center gap-3 text-[12px] text-gray-400 mb-4 font-serif italic">
+                <div className="flex items-center justify-center gap-4 text-[11px] text-gray-400 mb-6 font-serif italic uppercase tracking-widest">
                   <span>{item.date}</span>
-                  <span className="w-1 h-1 bg-gray-300 rounded-full" />
+                  <span className="w-1 h-1 bg-[#D4A017] rounded-full" />
                   <span>{item.tag}</span>
                 </div>
 
                 <p
-                  className="text-gray-600 leading-relaxed text-[15px] mb-5"
+                  className="text-gray-600 leading-relaxed text-sm mb-10 px-4"
                   style={{ fontFamily: "'Noto Serif', serif" }}
                 >
                   {item.desc}
                 </p>
 
-                <a
-                  href="#"
-                  className="inline-block text-[11px] font-bold uppercase tracking-widest border-b border-transparent hover:border-current transition-all"
-                  style={{ fontFamily: "'Nunito', sans-serif", color: "#8B4513" }}
+                <button
+                  className="bg-[#8B2611] text-white px-10 py-3 text-[11px] font-bold uppercase tracking-[0.2em] hover:bg-black transition-all shadow-md"
+                  style={{ fontFamily: "'Nunito', sans-serif" }}
                 >
-                  Read More...
-                </a>
+                  Read More
+                </button>
               </div>
             </div>
           ))}

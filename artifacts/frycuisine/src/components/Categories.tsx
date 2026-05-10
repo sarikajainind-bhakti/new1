@@ -1,7 +1,7 @@
 const categories = [
   { name: "Street Food", image: "./images/H16.png" },
   { name: "Fast Food", image: "./images/H17.png" },
-  { name: "Vegan Food", image: "./images/H25.png" },
+  { name: "Healthy Bowls", image: "./images/H18.png" },
   { name: "Fried Food", image: "./images/H19.png" },
   { name: "Desserts", image: "./images/H20.png" },
   { name: "Snacks", image: "./images/H21.png" },

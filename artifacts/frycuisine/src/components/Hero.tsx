@@ -22,7 +22,7 @@ export function Hero() {
             style={{
               fontFamily: "'Playfair Display', serif",
               fontSize: "clamp(36px, 5vw, 60px)",
-              color: "#FFFFFF",
+              color: "#D4A017",
             }}
           >
             Explore Trending, Global & <br/>Healthy Food at FryCuisine
