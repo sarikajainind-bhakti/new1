@@ -1,4 +1,5 @@
-import { Instagram, Facebook, Youtube, Send } from "lucide-react";
+import { Send } from "lucide-react";
+import { FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa";
 
 export function Footer() {
   return (
@@ -60,13 +61,13 @@ export function Footer() {
           </h4>
           <div className="flex gap-4">
             <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-[#8B2611] hover:border-[#8B2611] transition-all">
-              <Instagram className="w-5 h-5" />
+              <FaInstagram className="w-5 h-5" />
             </a>
             <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-[#8B2611] hover:border-[#8B2611] transition-all">
-              <Facebook className="w-5 h-5" />
+              <FaFacebook className="w-5 h-5" />
             </a>
             <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-[#8B2611] hover:border-[#8B2611] transition-all">
-              <Youtube className="w-5 h-5" />
+              <FaYoutube className="w-5 h-5" />
             </a>
             <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-[#8B2611] hover:border-[#8B2611] transition-all">
               <Send className="w-5 h-5" />
