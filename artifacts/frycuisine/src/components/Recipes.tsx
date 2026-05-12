@@ -30,96 +30,82 @@ const recipes = [
 ];
 
 export function Recipes() {
-  const featured = recipes[0];
-  const others = recipes.slice(1);
-
   return (
-    <section className="bg-white py-16 px-6">
-      <div className="max-w-[1000px] mx-auto">
+    <section className="relative bg-white py-24 px-6 overflow-hidden">
+      {/* Decorative Wavy Lines - Right */}
+      <div className="absolute top-0 right-0 w-[500px] h-full pointer-events-none opacity-30">
+        <svg viewBox="0 0 200 800" className="w-full h-full">
+          <path d="M200,0 Q140,100 200,200 T200,400 T200,600 T200,800" fill="none" stroke="#D4A017" strokeWidth="0.3" />
+          <path d="M190,0 Q130,100 190,200 T190,400 T190,600 T190,800" fill="none" stroke="#D4A017" strokeWidth="0.3" />
+          <path d="M180,0 Q120,100 180,200 T180,400 T180,600 T180,800" fill="none" stroke="#D4A017" strokeWidth="0.3" />
+          <path d="M170,0 Q110,100 170,200 T170,400 T170,600 T170,800" fill="none" stroke="#D4A017" strokeWidth="0.3" />
+        </svg>
+      </div>
+
+      {/* Decorative Wavy Lines - Left */}
+      <div className="absolute bottom-0 left-0 w-[500px] h-full pointer-events-none opacity-30 scale-x-[-1]">
+        <svg viewBox="0 0 200 800" className="w-full h-full">
+          <path d="M200,0 Q140,100 200,200 T200,400 T200,600 T200,800" fill="none" stroke="#D4A017" strokeWidth="0.3" />
+          <path d="M190,0 Q130,100 190,200 T190,400 T190,600 T190,800" fill="none" stroke="#D4A017" strokeWidth="0.3" />
+          <path d="M180,0 Q120,100 180,200 T180,400 T180,600 T180,800" fill="none" stroke="#D4A017" strokeWidth="0.3" />
+          <path d="M170,0 Q110,100 170,200 T170,400 T170,600 T170,800" fill="none" stroke="#D4A017" strokeWidth="0.3" />
+        </svg>
+      </div>
+
+      <div className="max-w-[1100px] mx-auto relative z-10">
         <h2
-          className="text-center font-bold mb-16 uppercase tracking-[0.2em]"
+          className="text-left font-normal mb-20 uppercase tracking-[0.15em]"
           style={{
-            fontFamily: "'Playfair Display', serif",
-            fontSize: "36px",
+            fontFamily: "'Cinzel Decorative', serif",
+            fontSize: "clamp(36px, 5vw, 52px)",
             color: "#1A1A1A",
           }}
         >
-          Recipes Section
+          RECIPES SECTION
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
-          {/* Featured Recipe */}
-          <div className="md:col-span-7 group cursor-pointer">
-            <div className="aspect-[16/10] overflow-hidden shadow-xl mb-8">
-              <img
-                src={featured.image}
-                alt={featured.title}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-            </div>
-            <div>
-              <p className="text-xs text-gray-400 uppercase tracking-widest mb-4 font-serif italic">
-                {featured.date}
-              </p>
-              <h3 
-                className="text-3xl md:text-4xl font-semibold italic text-[#8B4513] mb-6"
-                style={{ fontFamily: "'Playfair Display', serif" }}
-              >
-                {featured.title}
-              </h3>
-              <p 
-                className="text-gray-600 leading-loose text-lg mb-8"
-                style={{ fontFamily: "'Noto Serif', serif" }}
-              >
-                {featured.desc}
-              </p>
-              <a
-                href="#"
-                className="inline-block text-xs font-bold uppercase tracking-[0.25em] border-b-2 border-[#8B4513] pb-1 hover:text-black hover:border-black transition-all"
-                style={{ fontFamily: "'Nunito', sans-serif" }}
-              >
-                Continue Reading
-              </a>
-            </div>
-          </div>
-
-          {/* List of Other Recipes */}
-          <div className="md:col-span-5 space-y-10">
-            {others.map((item, idx) => (
-              <div key={idx} className="flex gap-6 group cursor-pointer border-b border-gray-50 pb-8 last:border-0">
-                <div className="w-32 h-32 shrink-0 overflow-hidden shadow-md">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                </div>
-                <div>
-                  <p className="text-[10px] text-gray-400 uppercase tracking-widest mb-2 font-serif italic">
-                    {item.date}
-                  </p>
-                  <h4 
-                    className="text-xl font-semibold italic text-[#1A1A1A] group-hover:text-[#8B4513] transition-colors mb-2 leading-tight"
-                    style={{ fontFamily: "'Playfair Display', serif" }}
-                  >
-                    {item.title}
-                  </h4>
-                  <p className="text-gray-500 text-xs line-clamp-2 leading-relaxed" style={{ fontFamily: "'Noto Serif', serif" }}>
-                    {item.desc}
-                  </p>
-                </div>
+        <div className="space-y-24">
+          {recipes.map((item, idx) => (
+            <div 
+              key={idx} 
+              className={`flex flex-col md:flex-row items-center gap-12 md:gap-20 ${idx % 2 === 1 ? 'md:flex-row-reverse' : ''}`}
+            >
+              {/* Text Side */}
+              <div className="flex-1 text-left space-y-4">
+                <p className="text-[14px] text-gray-400 uppercase tracking-widest font-serif">
+                  {item.date}
+                </p>
+                <h3 
+                  className="text-3xl md:text-4xl font-bold text-[#1A1A1A]"
+                  style={{ fontFamily: "'Playfair Display', serif" }}
+                >
+                  {item.title}
+                </h3>
+                <p 
+                  className="text-gray-600 leading-relaxed text-[16px] max-w-lg"
+                  style={{ fontFamily: "'Noto Serif', serif" }}
+                >
+                  {item.desc}
+                </p>
+                <a
+                  href="#"
+                  className="inline-block text-[13px] font-bold uppercase tracking-[0.2em] text-[#D4A017] hover:text-black transition-all"
+                  style={{ fontFamily: "'Nunito', sans-serif" }}
+                >
+                  Continue Reading
+                </a>
               </div>
-            ))}
-          </div>
-        </div>
 
-        <div className="flex justify-center mt-20">
-          <button
-            className="bg-black text-white px-12 py-4 text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-[#8B4513] transition-all duration-500 shadow-lg"
-            style={{ fontFamily: "'Nunito', sans-serif" }}
-          >
-            View More Recipes
-          </button>
+              {/* Image Side */}
+              <div className="flex-1 w-full aspect-square md:aspect-[4/3] overflow-hidden shadow-2xl">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
