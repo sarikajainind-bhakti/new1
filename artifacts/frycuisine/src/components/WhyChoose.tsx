@@ -27,7 +27,7 @@ export function WhyChoose() {
           {/* Background Image Element */}
           <div className="absolute inset-0">
             <img 
-              src="./images/H38.png" 
+              src="/images/H38.png" 
               alt="Food Background" 
               className="w-full h-full object-cover"
               style={{ objectPosition: 'left center' }}

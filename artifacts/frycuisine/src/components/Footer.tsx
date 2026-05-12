@@ -7,7 +7,7 @@ export function Footer() {
       {/* Background with Texture/Food - 5% Opacity */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-5"
-        style={{ backgroundImage: "url('./images/H39.png')" }}
+        style={{ backgroundImage: "url('/images/H39.png')" }}
       />
 
       <div className="relative z-10 max-w-[1300px] mx-auto text-center md:text-left">

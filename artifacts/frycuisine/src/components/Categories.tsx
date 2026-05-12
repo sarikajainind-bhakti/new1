@@ -1,12 +1,12 @@
 const categories = [
-  { name: "Street Food", image: "./images/H16.png" },
-  { name: "Fast Food", image: "./images/H17.png" },
-  { name: "Vegan Food", image: "./images/H18.png" },
-  { name: "Fried Food", image: "./images/H19.png" },
-  { name: "Desserts", image: "./images/H20.png" },
-  { name: "Snacks", image: "./images/H21.png" },
-  { name: "Breakfast", image: "./images/H22.png" },
-  { name: "Dinner", image: "./images/H23.png" },
+  { name: "Street Food", image: "/images/H16.png" },
+  { name: "Fast Food", image: "/images/H17.png" },
+  { name: "Vegan Food", image: "/images/H18.png" },
+  { name: "Fried Food", image: "/images/H19.png" },
+  { name: "Desserts", image: "/images/H20.png" },
+  { name: "Snacks", image: "/images/H21.png" },
+  { name: "Breakfast", image: "/images/H22.png" },
+  { name: "Dinner", image: "/images/H23.png" },
 ];
 
 export function Categories() {

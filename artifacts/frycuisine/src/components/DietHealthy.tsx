@@ -3,19 +3,19 @@ const items = [
     category: "Weight Loss Diet Foods",
     title: "Quinoa Veg Salad Bowl",
     desc: "Fresh vegetables with quinoa and light dressing. Perfect for healthy weight loss and clean eating.",
-    image: "./images/H13.png",
+    image: "/images/H13.png",
   },
   {
     category: "High Protein Diet Foods",
     title: "Paneer Protein Power Bowl",
     desc: "High protein paneer with veggies and healthy options. Keeps you full and boosts energy.",
-    image: "./images/H14.png",
+    image: "/images/H14.png",
   },
   {
     category: "Keto Food List",
     title: "Avocado Egg Keto Plate",
     desc: "Low carb avocado and eggs for keto lifestyle. Supports fat burning and steady energy.",
-    image: "./images/H15.png",
+    image: "/images/H15.png",
   },
 ];
 
