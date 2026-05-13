@@ -119,7 +119,7 @@ export function Latest() {
               className="text-4xl md:text-7xl font-light text-[#1A1A1A] tracking-tight"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              Latest from (Updated Now)
+              Latest from
             </h2>
             <span
               className="text-6xl md:text-9xl text-[#8B4513] md:translate-y-4"
