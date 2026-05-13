@@ -39,13 +39,13 @@ export function Latest() {
       return (
         <div
           key="featured"
-          className="group cursor-pointer"
+          className="group cursor-pointer h-full"
         >
-          <div className="relative overflow-hidden">
+          <div className="relative overflow-hidden h-full">
             <img
               src={post.image}
               alt={post.title}
-              className="w-full h-auto object-cover transition-transform duration-1000 ease-out group-hover:scale-105 aspect-[16/9] md:aspect-[21/9]"
+              className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105 aspect-[16/9] md:aspect-[21/9]"
             />
             {/* Overlay for Featured Card */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
@@ -59,7 +59,7 @@ export function Latest() {
               >
                 {post.title}
               </h3>
-              <p className="text-[14px] md:text-[16px] leading-relaxed italic font-light opacity-90 max-w-2xl line-clamp-5">
+              <p className="text-[16px] md:text-[18px] leading-relaxed italic font-light opacity-90 max-w-2xl line-clamp-3">
                 {post.desc}
               </p>
             </div>
@@ -71,28 +71,28 @@ export function Latest() {
     return (
       <div
         key={idx}
-        className="group cursor-pointer"
+        className="group cursor-pointer flex flex-col h-full"
       >
-        <div className="relative overflow-hidden mb-4">
+        <div className="relative overflow-hidden mb-5 aspect-[4/3]">
           <img
             src={post.image}
             alt={post.title}
-            className="w-full h-auto object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
+            className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
           />
         </div>
 
-        <div className="text-left px-1 pb-4">
+        <div className="text-left px-1 flex-grow">
           <p className="text-[11px] md:text-[12px] text-[#8B4513] font-medium tracking-wide mb-2 opacity-90 font-serif">
             {post.tag} , <span className="italic">{post.date}</span>
           </p>
           <h3
-            className="text-[19px] md:text-[21px] text-[#1A1A1A] leading-tight italic font-bold mb-3 transition-colors duration-300"
+            className="text-[20px] md:text-[23px] text-[#1A1A1A] leading-tight italic font-bold mb-3 line-clamp-2 min-h-[3.2rem]"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             {post.title}
           </h3>
           <p 
-            className="text-[14px] text-gray-600 leading-relaxed italic font-light line-clamp-5"
+            className="text-[16px] md:text-[17px] text-gray-600 leading-relaxed italic font-light line-clamp-3"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             {post.desc}
@@ -134,30 +134,22 @@ export function Latest() {
           </div>
         </div>
 
-        {/* Tight Editorial Grid with Nested Structure to eliminate gaps */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-[5px]">
-          {/* Main Left Block (Cols 1 & 2) */}
-          <div className="lg:col-span-2 flex flex-col gap-[5px]">
+        {/* Grid Layout for perfect alignment */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
+          {/* Top Row: Featured (span 2) and one small card */}
+          <div className="lg:col-span-2">
             {renderCard(posts[0], 0, true)}
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-[5px]">
-              {/* Column 1 */}
-              <div className="flex flex-col gap-[5px]">
-                {col1.map((post, idx) => renderCard(post, idx + 100))}
-              </div>
-
-              {/* Column 2 */}
-              <div className="flex flex-col gap-[5px]">
-                {col2.map((post, idx) => renderCard(post, idx + 200))}
-              </div>
-            </div>
           </div>
-
-          {/* Right Block (Col 3) */}
-          <div className="flex flex-col gap-[5px]">
+          <div>
             {renderCard(posts[1], 1)}
-            {col3.map((post, idx) => renderCard(post, idx + 300))}
           </div>
+
+          {/* Remaining Posts in perfect 3-column grid */}
+          {posts.slice(2).map((post, idx) => (
+            <div key={idx + 2}>
+              {renderCard(post, idx + 2)}
+            </div>
+          ))}
         </div>
       </div>
     </section>
