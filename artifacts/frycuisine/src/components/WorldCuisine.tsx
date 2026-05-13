@@ -19,52 +19,27 @@ const countries = [
   },
 ];
 
-function CurveSVG({ flip }: { flip?: boolean }) {
-  return (
-    <svg
-      width="52"
-      height="260"
-      viewBox="0 0 52 260"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={`opacity-40 shrink-0 ${flip ? "scale-x-[-1]" : ""}`}
-    >
-      <path
-        d="M42 8 C 20 30, 4 55, 22 90 C 40 125, 50 140, 32 175 C 14 210, 4 230, 20 252"
-        stroke="#8B2611"
-        strokeWidth="1.6"
-        fill="none"
-        strokeLinecap="round"
-      />
-      <circle cx="42" cy="8" r="3" fill="#8B2611" />
-      <circle cx="20" cy="252" r="3" fill="#8B2611" />
-    </svg>
-  );
-}
-
 export function WorldCuisine() {
   return (
-    <section className="bg-[#FAF9F6] py-16">
+    <section className="bg-[#FAF9F6] pt-0 pb-16">
       <div className="max-w-[1200px] mx-auto px-6">
         
         <div className="flex items-center gap-6 mb-12">
-          <div className="flex-1 h-[1px] bg-[#D4A017]/30" />
+          <div className="flex-1 h-[1px] bg-black/10" />
           <div className="flex items-center gap-2">
-            <span className="text-[#D4A017] text-[10px]">◆</span>
+            <span className="text-black/30 text-[10px]">◆</span>
             <h2 
               className="text-xl md:text-2xl font-bold uppercase tracking-[0.2em]"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
               World Famous Food by Country
             </h2>
-            <span className="text-[#D4A017] text-[10px]">◆</span>
+            <span className="text-black/30 text-[10px]">◆</span>
           </div>
-          <div className="flex-1 h-[1px] bg-[#D4A017]/30" />
+          <div className="flex-1 h-[1px] bg-black/10" />
         </div>
 
         <div className="flex items-center gap-4">
-          <CurveSVG />
-          
           <div className="flex-1 grid grid-cols-1 md:grid-cols-3 gap-8">
             {countries.map((item, idx) => (
               <div
@@ -107,8 +82,6 @@ export function WorldCuisine() {
               </div>
             ))}
           </div>
-
-          <CurveSVG flip />
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 export function WhyChoose() {
   return (
-    <section className="relative bg-white pt-16 pb-0 overflow-hidden">
+    <section className="relative bg-white pt-8 pb-0 overflow-hidden">
       {/* Decorative Wavy Lines */}
       <div className="absolute top-0 left-0 w-full flex justify-between px-10 pointer-events-none opacity-20">
         <svg viewBox="0 0 100 50" className="w-32 h-32 rotate-180">

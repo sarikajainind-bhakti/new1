@@ -4,9 +4,9 @@ import { MdNotifications } from "react-icons/md";
 export function Footer() {
   return (
     <footer className="relative bg-[#0A0A0A] text-white pt-20 pb-12 px-6 md:px-12 overflow-hidden">
-      {/* Background with Texture/Food - 5% Opacity */}
+      {/* Background with Texture/Food - 50% Opacity */}
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-5"
+        className="absolute inset-0 bg-cover bg-center opacity-50"
         style={{ backgroundImage: "url('/images/H39.png')" }}
       />
 

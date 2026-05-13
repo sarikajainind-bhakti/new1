@@ -31,14 +31,14 @@ const trendingItems = [
 
 export function Trending() {
   return (
-    <section className="bg-[#FAF9F6] py-16 px-6">
+    <section className="bg-[#FAF9F6] pt-16 pb-4 px-6">
       <div className="max-w-[1200px] mx-auto">
         <h2
           className="text-left font-normal mb-12 uppercase tracking-[0.1em]"
           style={{
             fontFamily: "'Cinzel Decorative', serif",
             fontSize: "clamp(32px, 4vw, 48px)",
-            color: "#1A1A1A",
+            color: "#ebbc65ff",
           }}
         >
           Trending Food Right Now
@@ -46,8 +46,8 @@ export function Trending() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
           {trendingItems.map((item, idx) => (
-            <div key={idx} className="group cursor-pointer">
-              <div className="relative overflow-hidden mb-6 aspect-[16/10]">
+            <div key={idx} className="group overflow-hidden">
+              <div className="relative aspect-[4/3] overflow-hidden">
                 <img
                   src={item.image}
                   alt={item.title}
@@ -55,34 +55,35 @@ export function Trending() {
                 />
               </div>
 
-              <div className="text-left">
+              <div className="p-10 flex flex-col items-center text-center bg-[#F9F7F2]">
                 <h3
-                  className="text-2xl font-semibold italic mb-2 text-[#8B4513]"
+                  className="text-2xl md:text-4xl mb-4 leading-tight italic"
                   style={{
-                    fontFamily: "'Playfair Display', serif",
+                    fontFamily: "'Cormorant Garamond', serif",
+                    color: "#8B5E3C",
+                    fontWeight: 400
                   }}
                 >
                   {item.title}
                 </h3>
 
-                <div className="flex items-center gap-2 text-[13px] text-gray-500 mb-4 font-serif">
+                <div className="flex items-center gap-2 text-[12px] uppercase tracking-[0.25em] text-gray-400 mb-5 font-medium">
                   <span>{item.date}</span>
+                  <span className="w-1.5 h-1.5 bg-gray-200 rounded-full"></span>
                   <span>{item.tag}</span>
                 </div>
 
                 <p
-                  className="text-gray-700 leading-relaxed text-[15px] mb-5 max-w-lg"
-                  style={{ fontFamily: "'Noto Serif', serif" }}
+                  className="text-gray-600 leading-relaxed text-[16px] mb-8 max-w-sm font-light"
                 >
                   {item.desc}
                 </p>
 
                 <a
                   href="#"
-                  className="inline-block text-[12px] font-bold uppercase tracking-[0.2em] text-[#8B4513] hover:text-black transition-colors"
-                  style={{ fontFamily: "'Nunito', sans-serif" }}
+                  className="text-[12px] uppercase tracking-[0.4em] font-bold text-[#8B5E3C] hover:text-black transition-colors"
                 >
-                  Read More...
+                  READ MORE...
                 </a>
               </div>
             </div>

@@ -21,43 +21,48 @@ const items = [
 
 export function DietHealthy() {
   return (
-    <section className="bg-[#FAF9F6] py-16 px-6">
-      <div className="max-w-[1200px] mx-auto">
-        <h2
-          className="text-center font-bold mb-12 uppercase tracking-widest"
-          style={{
-            fontFamily: "'Playfair Display', serif",
-            fontSize: "36px",
-            color: "#1A1A1A",
-          }}
-        >
-          Diet & Healthy Food Guides
-        </h2>
+    <section className="bg-[#F9F7F2] py-20 px-6">
+      <div className="max-w-[1250px] mx-auto">
+        {/* Header with Side Lines */}
+        <div className="flex items-center gap-4 md:gap-10 mb-16">
+          <div className="flex-1 h-[1px] bg-black/20" />
+          <h2
+            className="text-center font-bold uppercase tracking-[0.1em] leading-tight"
+            style={{
+              fontFamily: "'Playfair Display', serif",
+              fontSize: "clamp(28px, 4vw, 48px)",
+              color: "#1A1A1A",
+            }}
+          >
+            Diet & Healthy Food Guides
+          </h2>
+          <div className="flex-1 h-[1px] bg-black/20" />
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {items.map((item, idx) => (
             <div
               key={idx}
-              className="bg-white group cursor-pointer shadow-md hover:shadow-xl transition-all duration-300"
+              className="group cursor-pointer text-center"
             >
-              <div className="h-[240px] overflow-hidden">
+              <div className="h-[280px] overflow-hidden mb-6 shadow-sm">
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
               </div>
 
-              <div className="p-8">
+              <div className="px-4">
                 <p 
-                  className="text-[11px] text-[#8B2611] uppercase tracking-[0.2em] font-bold mb-4"
-                  style={{ fontFamily: "'Nunito', sans-serif" }}
+                  className="text-[18px] md:text-[22px] text-[#8B4513] font-bold mb-4"
+                  style={{ fontFamily: "'Playfair Display', serif" }}
                 >
                   {item.category}
                 </p>
                 
                 <h3
-                  className="text-xl font-semibold italic mb-4 underline decoration-[#D4A017] underline-offset-8"
+                  className="text-[20px] md:text-[24px] font-bold italic mb-4"
                   style={{
                     fontFamily: "'Playfair Display', serif",
                     color: "#1A1A1A",
@@ -67,15 +72,15 @@ export function DietHealthy() {
                 </h3>
 
                 <p
-                  className="text-gray-500 leading-relaxed text-sm mb-8"
-                  style={{ fontFamily: "'Noto Serif', serif" }}
+                  className="text-gray-600 leading-relaxed text-[16px] italic mb-8 font-light"
+                  style={{ fontFamily: "'Playfair Display', serif" }}
                 >
                   {item.desc}
                 </p>
 
                 <button
-                  className="bg-black text-white px-8 py-2.5 text-[10px] uppercase tracking-widest font-bold hover:bg-[#8B2611] transition-colors"
-                  style={{ fontFamily: "'Nunito', sans-serif" }}
+                  className="bg-[#8B4513] text-white px-10 py-3 text-[14px] uppercase tracking-widest font-bold hover:bg-black transition-all duration-300 rounded-sm"
+                  style={{ fontFamily: "'Playfair Display', serif" }}
                 >
                   Read More
                 </button>
