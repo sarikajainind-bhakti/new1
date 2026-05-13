@@ -59,7 +59,7 @@ export function Latest() {
               >
                 {post.title}
               </h3>
-              <p className="text-[16px] md:text-[18px] leading-relaxed italic font-light opacity-90 max-w-2xl line-clamp-3">
+              <p className="text-[18px] md:text-[20px] leading-relaxed italic font-light opacity-90 max-w-2xl line-clamp-2">
                 {post.desc}
               </p>
             </div>
@@ -81,7 +81,7 @@ export function Latest() {
           />
         </div>
 
-        <div className="text-left px-1 flex-grow">
+        <div className="text-left px-1 flex-grow flex flex-col">
           <p className="text-[11px] md:text-[12px] text-[#8B4513] font-medium tracking-wide mb-2 opacity-90 font-serif">
             {post.tag} , <span className="italic">{post.date}</span>
           </p>
@@ -92,7 +92,7 @@ export function Latest() {
             {post.title}
           </h3>
           <p 
-            className="text-[16px] md:text-[17px] text-gray-600 leading-relaxed italic font-light line-clamp-3"
+            className="text-[17px] md:text-[18px] text-gray-600 leading-relaxed italic font-light line-clamp-2"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             {post.desc}
@@ -137,16 +137,16 @@ export function Latest() {
         {/* Grid Layout for perfect alignment */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
           {/* Top Row: Featured (span 2) and one small card */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 h-full">
             {renderCard(posts[0], 0, true)}
           </div>
-          <div>
+          <div className="h-full">
             {renderCard(posts[1], 1)}
           </div>
 
           {/* Remaining Posts in perfect 3-column grid */}
           {posts.slice(2).map((post, idx) => (
-            <div key={idx + 2}>
+            <div key={idx + 2} className="h-full">
               {renderCard(post, idx + 2)}
             </div>
           ))}
